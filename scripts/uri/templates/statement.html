@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>URI 1 - {{data.title}}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="author" content="URI Online Judge; www.urionlinejudge.edu.br" />
+		<meta name="description" content="URI Online Judge - Problema 1 - {{data.title}}" />
+
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="https://urionlinejudge.r.worldssl.net/repository/contest.css" />
+		<script type="text/javascript" src="https://urionlinejudge.r.worldssl.net/judge/js/math-jax/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+	</head>
+	<body>
+		<div class="header">
+			<span>URI Online Judge | 1</span>
+			<h1>{{data.title}}</h1>
+			<div>
+				<p>Por {{data.author}} <img src='https://urionlinejudge.r.worldssl.net/gallery/images/flags/br.gif' alt='BR' /> Brazil</p>
+			</div>
+			<strong>Timelimit: {{data.timelimit}}</strong>
+		</div>
+
+		<div class="problem">
+
+			<div class="description">
+			   {{data.description}}
+         </div>
+			<h2>Entrada</h2>
+
+			<div class="input">
+			   {{data.input_description}}
+         </div>
+
+			<h2>Saída</h2>
+
+			<div class="output">
+			   {{data.output_description}}
+         </div>
+
+			<div class="both"></div>
+
+			<table>
+				<thead>
+					<tr>
+						<td>Exemplos de Entrada</td>
+						<td>Exemplos de Saída</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="division">
+							<p>{{data.samples[0].input}}</p>
+
+						</td>
+						<td>
+							<p>{{data.samples[0].output}}</p>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		<div class="both"></div>
+
+         {% for sample in data.samples[1:] %}
+			<table>
+				<thead>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="division">
+								<p> {{sample.input}} </p>
+						</td>
+						<td>
+							<p> {{sample.output}} </p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+         {% endfor %}
+			<p class="footer">
+				{{data.notes}}
+			</p>
+		</div>
+	</body>
+</html>

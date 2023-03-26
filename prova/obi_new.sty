@@ -1,0 +1,164 @@
+\newcommand{\CWD}{./}
+\usepackage{caption}
+
+\captionsetup[figure]{labelformat=empty}
+
+\newcommand{\problemName}[2]
+  {
+    \def\curprob{#2}
+    \addtocounter{pcounter}{1}
+    \newpage
+    \begin{center}
+      \huge{\sf #1}\\[5mm]
+      %\normalsize {\em Nome do arquivo fonte:}
+      %{\tt #2.c}, {\tt #2.cpp}, {\tt #2.pas}, {\tt #2.java}, {\em ou} {\tt #2.py}
+      \vspace{2pt}
+    \end{center}
+  }
+
+
+\newcommand{\includeProblem}[2]
+  {
+    \renewcommand{\CWD}{../problems/#2/documents}
+    \def\curprob{#2}
+    \addtocounter{pcounter}{1}
+    \newpage
+    %\begin{center}
+        {\huge{\bf Problema \Alph{pcounter}. #1}}\\[5mm]
+      {\em Nome do arquivo fonte:}
+        {\tt #2.c}, {\tt #2.cpp}, {\em ou} {\tt #2.java}
+      %\vspace{6pt}
+    %\end{center}
+    
+    \input{\CWD/statement.tex}
+  }
+\input{defs.tex}
+
+\addtolength{\parskip}{0.4\baselineskip}
+
+\gdef\curprob{nada}
+\pagestyle{myheadings}
+
+\newcounter{pcounter}\setcounter{pcounter}{0}
+\newcounter{qcounter}\setcounter{qcounter}{0}
+
+\usepackage{titlesec}
+
+\titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{6t plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+%\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus 
+%    -.2ex}{2.3ex plus .2ex}{\centering\huge\sf}}
+
+%\def\subsection{\@startsection {subsection}{2}{\z@}{-3.5ex plus -1ex minus 
+%    -.2ex}{2.3ex plus .2ex}{\Large\bf}}
+
+
+\newcommand{\question}[1]
+  {
+    \addtocounter{qcounter}{1}
+    \vspace{6pt}
+    \noindent
+    {\bf Questão \arabic{qcounter}.} {#1}
+    \vspace{6pt}
+  }
+
+\newcommand{\arquivoProblema}[1]
+  {
+    \begin{center}
+      \normalsize {\em Nome do arquivo fonte:}
+      {\tt #1.c}, {\tt #1.cpp}, {\tt #1.pas}, {\tt #1.java}, {\em ou} {\tt #1.py}
+      \vspace{6pt}
+    \end{center}
+  }
+
+\newcommand{\InsertTitlePage}
+  {
+    \pagestyle{myheadings}
+    \markright{Maratona Mineira de Programação -- \Ano}
+
+    %%% Title Page
+    \begin{titlepage}
+    \begin{center}
+
+      \includegraphics[scale=0.3]{logo.png}
+
+      \vspace{0.5cm}
+      {\huge{\hspace{-0.1cm}\bf \Ano}}
+
+      {\huge{\bf Caderno de Problemas}}\\[12pt]
+      {\Large\bf \Modalidade}
+
+      %\vspace{0.3cm}
+      %\Data\\
+      %\vspace{0.5cm}
+      %A PROVA TEM DURAÇÃO DE \textbf{\Duracao} HORAS
+      %\vspace{0.5cm}
+
+      \vspace{1cm}
+      {\small \bf Patrocínio}\\[8pt]
+
+      \vspace{1cm}
+      \includegraphics[scale=0.9]{logo_patrocinadores.png}
+
+      \vspace{2cm}
+      \hspace{3cm}
+      \begin{minipage}[h]{0.4\textwidth}
+        {\small \bf\ \ Colaboração}\\[8pt]
+        \includegraphics[scale=2]{logo_colaboradores.png}
+      \end{minipage}
+      \begin{minipage}[h]{0.4\textwidth}
+      	\vspace{0.82cm}
+        {\small \bf\ \ Realização}\\[8pt]
+        \includegraphics[scale=0.35]{logo_realizacao.png}
+      \end{minipage}
+
+    \end{center}
+    \end{titlepage}
+
+      \section*{Informações gerais}
+
+      \input{instrucoes.tex}
+    
+    \clearpage
+  }
+
+\newcommand{\InsertEditorialTitlePage}
+  {
+    \pagestyle{myheadings}
+    \markright{Olimpíada Brasileira de Informática -- \Ano}
+
+    %%% Title Page
+    \begin{titlepage}
+    \begin{center}
+
+      \includegraphics{logo_obi.pdf}
+
+      \vspace{0.5cm}
+      {\huge{\bf \Ano}}
+
+      \vspace{0.5cm}
+      {\huge{\bf Caderno de soluções}}\\[12pt]
+      {\Large Modalidade \textbf{Programação}
+      {\small $\bullet$} Nível \textbf{\Nivel}, Fase \textbf{\Fase}}
+
+      \vspace{0.3cm}
+      \Data\\
+
+      \vspace*{\fill}
+      {\small \bf Promoção:}\\[8pt]
+      \includegraphics{logo_sbc.pdf}
+      %Sociedade Brasileira de Computação\\[10pt]
+
+      \vspace{2cm}
+      {\small \bf Patrocínio:}\\[8pt]
+      \includegraphics{logo_fcc.pdf}
+      %Fundação Carlos Chagas
+
+    \end{center}
+    \end{titlepage}
+
+    \clearpage
+  }
+

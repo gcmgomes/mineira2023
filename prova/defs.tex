@@ -1,0 +1,162 @@
+%\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{fancyvrb}
+\usepackage{pdftexcmds}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{epsfig}
+\usepackage{tikz}
+
+\setlength{\marginparwidth}{0pt}
+\setlength{\oddsidemargin}{-0.25cm}
+\setlength{\evensidemargin}{-0.25cm}
+\setlength{\marginparsep}{0pt}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{5pt}
+
+\setlength{\textwidth}{16.5cm}
+\setlength{\textheight}{25.5cm}
+
+\setlength{\voffset}{-1in}
+
+\newcommand{\insereArquivo}[1]{
+\ifnum0\pdffilesize{#1}>0
+	\VerbatimInput[xleftmargin=0mm,numbers=none,obeytabs=true]{#1}\vspace{.5em}
+\fi
+}
+
+%\newcommand{\textoDiversasInstancias}{A entrada é composta por
+%diversos casos de teste. }
+\newcommand{\textoDiversasInstancias}{}
+
+%\newcommand{\arquivoProblema}[1]{\vspace{-0.3cm} \noindent {\em
+%Arquivo: \texttt{#1.[c|cpp|java]} \\}}
+
+\newcommand{\textoSaidaPadrao}{\vspace{0.2cm} \noindent \emph{A
+saída deve ser escrita na saída padrăo. }}
+
+\newcommand{\textoEntradaPadrao}{\vspace{0.2cm} \noindent \emph{A
+entrada deve ser lida da entrada padrăo. }}
+
+\newcommand{\incat}[1]{sample-#1.in}
+\newcommand{\solcat}[1]{sample-#1.sol}
+\newcounter{count}
+\setcounter{count}{0}
+
+\newcommand{\exemplo}{
+\vspace{0.3cm}
+{\small
+
+\setcounter{count}{0}
+% first check if sample.in is present (maratona)
+\IfFileExists{\CWD/sample.in} {
+  \begin{minipage}[c]{0.9\textwidth}
+  \begin{center}
+  \begin{tabular}{|l|l|} \hline
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{Exemplo de Entrada}
+  \insereArquivo{\CWD/sample.in}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{Saída para o Exemplo de Entrada}
+  \insereArquivo{\CWD/sample.sol}
+  \end{minipage}\\
+  \hline
+  \end{tabular}
+  \end{center}
+  \end{minipage} % leave next line empty
+
+  }{} % IfFileExists
+
+% then check if sample-n.in is present (obi)
+\whiledo{\value{count}<10}{
+  \addtocounter{count}{1}
+  \IfFileExists{\CWD/\incat{\thecount}} {
+  \begin{minipage}[c]{0.9\textwidth}
+  \begin{center}
+  \begin{tabular}{|l|l|} \hline
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{Entrada}
+  \insereArquivo{\CWD/\incat{\thecount}}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{Saída}
+  \insereArquivo{\CWD/\solcat{\thecount}}
+  \end{minipage}\\
+  \hline
+  \end{tabular}
+  \end{center}
+  \end{minipage} % leave next line empty
+
+  }{} % IfFileExists
+} % while
+}
+} % exemplo
+
+\newcommand{\exemplolongoesquerda}{
+\vspace{0.3cm}
+{\small
+
+\setcounter{count}{0}
+% first check if sample.in is present (maratona)
+\IfFileExists{\CWD/sample.in} {
+  \begin{minipage}[c]{0.9\textwidth}
+  \begin{center}
+  \begin{tabular}{|l|l|} \hline
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{Exemplo de Entrada}
+  \insereArquivo{sample.in}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{Saída para o Exemplo de Entrada}
+  \insereArquivo{sample.sol}
+  \end{minipage}\\
+  \hline
+  \end{tabular}
+  \end{center}
+  \end{minipage} % leave next line empty
+
+  }{} % IfFileExists
+
+% then check if sample-n.in is present (obi)
+\whiledo{\value{count}<10}{
+  \addtocounter{count}{1}
+  \IfFileExists{\CWD/\incat{\thecount}} {
+  \begin{minipage}[c]{0.95\textwidth}
+  \begin{center}
+  \begin{tabular}{|l|l|} \hline
+  \begin{minipage}[t]{0.88\textwidth}
+  \bf{Entrada}
+  \insereArquivo{\CWD/\incat{\thecount}}
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.12\textwidth}
+  \bf{Saída}
+  \insereArquivo{\CWD/\solcat{\thecount}}
+  \end{minipage}\\
+  \hline
+  \end{tabular}
+  \end{center}
+  \end{minipage} % leave next line empty
+
+  }{} % IfFileExists
+} % while
+}
+} % exemplolongoesquerda
+
+
+%\newcommand{\incluir}[1]{
+%\input{#1}
+%}

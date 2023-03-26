@@ -1,0 +1,9 @@
+category:   {{data.category}}
+name_pt:    {{data.title}}
+name_en:    {{data.title}}
+name_es:    {{data.title}}
+subject_pt: {{data.subject}}
+subject_en: {{data.subject}}
+subject_es: {{data.subject}}
+level:      {{data.level}}
+timelimit:  {{data.timelimit}}

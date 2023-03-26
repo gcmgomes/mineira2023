@@ -1,0 +1,43 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
+
+Coloque o seu enunciado (em português!) aqui, usando as macros
+abaixo.
+
+%
+% For input, use one of the following
+%
+\inputdesc{The first line contains five integers $A_1$, $B_1$, $C_1$,
+  $D_1$ and $E_1$ ($0 \leq A_1,B_1,C_1,D_1,E_1 \leq 1$), representing
+  the connection points labeled \emph{a},\emph{b}, \emph{c}, \emph{d}
+  and \emph{e} of the first connector in the pair. The second line
+  contains five integers $A_2$, $B_2$, $C_2$, $D_2$ and $E_2$ ($0 \leq
+  A_2,B_2,C_2,D_2,E_2 \leq 1$), representing the connection points
+  labeled \emph{a},\emph{b}, \emph{c}, \emph{d} and \emph{e} of the
+  second connector in the pair. In the input, a $0$ represents an outlet an
+  a $1$ represents a plug.}
+
+\inputdescline{an integer $N$ ($1 \le N \le 10^{100}$).}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{Output a line containing one character. 
+If the connectors are compatible, then write the upper case letter `\texttt{Y}'; otherwise
+write the uppercase letter `\texttt{N}'.}
+
+\outputdescline{an integer}{the number of eleven-multiple-anagrams of $N$.
+Because this number can be very large, you are required to output the remainder of dividing it by $10^9 + 7$.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

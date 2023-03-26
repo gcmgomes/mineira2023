@@ -1,0 +1,17 @@
+#!/bin/bash
+
+pushd . 2>&1 > /dev/null
+
+while [ ! -d .box -a `pwd` != / ]; do
+	cd ..
+done
+
+if [ ! -d .box ]; then
+	echo $0: could not find .box/ directory
+	exit 1
+fi
+
+BOXDIR=`pwd`
+popd 2>&1 > /dev/null
+
+$BOXDIR/.box/main.py $*
