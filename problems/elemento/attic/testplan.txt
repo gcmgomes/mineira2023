@@ -1,0 +1,15 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+
+# Manual cases
+2     ; copy attic/manual-1.in
+2     ; copy attic/manual-2.in
+2     ; copy attic/manual-3.in
+2     ; copy attic/manual-4.in
+2     ; copy attic/manual-5.in
+2     ; copy attic/manual-6.in
+
