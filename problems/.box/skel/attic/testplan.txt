@@ -1,12 +1,20 @@
-# This is a sample test plan
-# the first column specifies the test group
-# the second column specifies the command to be executed
+# this file contains the test plan
+# format: test group ; command to be executed
+# script build-tests calls gen_tests.py, which copies samples and
+# executes the command gen_tests.py
 
-# Use samples as tests
-1     ; copy documents/sample-1.in
+# use handmade tests
+# 1     ; copy attic/handmade/handmade-1.in
+# samples from the statement were copied in script build-tests
 
-# Use generators
-2     ; gen_random.exe 1 5
-2     ; gen_random.exe 5 10
-2     ; gen_random.exe 10 50
-2     ; gen_random.exe 50 100
+# use generators
+2     ; py_generator.exe 1 5
+2     ; py_generator.exe 5 10
+2     ; py_generator.exe 10 50
+2     ; py_generator.exe 50 100
+
+# note that the sample c++ generator only takes two arguments
+# here we add dummy v1/v2 argument just to have different outputs for the same bounds
+# (as generators random engines use program args as seed)
+3     ; generator.exe 10 100 v1
+3     ; generator.exe 10 100 v2

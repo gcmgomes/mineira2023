@@ -1,10 +1,11 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # encoding: utf-8
 
 import os
 import subprocess
 import resource
 import signal
+import sys
 from tempfile import NamedTemporaryFile
 
 import hints
@@ -18,10 +19,10 @@ class Result (object):
 def run_solution(sol_fn, input_fn,
                  output_fn = None,
                  reference_fn = None,
+                 judge_cmd = None,
                  time_limit = 20,
-                 mem_limit = 1024,
-                 file_limit = 1024,
-                 comparator_fn = None):
+                 mem_limit = 2048,
+                 file_limit = None):
     if reference_fn is None:
         if output_fn is None:
             output_fn = '/dev/null'
@@ -29,14 +30,20 @@ def run_solution(sol_fn, input_fn,
         assert output_fn is None
         output_file = NamedTemporaryFile(delete = False)
         output_fn = output_file.name
-
-    mem_limit=mem_limit*1024*1024
-    file_limit=file_limit*1024 * 20
+    actual_time_limit = int(time_limit) + 1
+    if file_limit is not None:
+        file_limit = file_limit * 1024
+    mem_limit = mem_limit * 1024 * 1024
     pid = os.fork()
     if pid == 0:
-        resource.setrlimit(resource.RLIMIT_CPU, (time_limit+1, time_limit + 1))
-        resource.setrlimit(resource.RLIMIT_DATA, (mem_limit, mem_limit))
-        resource.setrlimit(resource.RLIMIT_FSIZE, (file_limit, file_limit))
+        resource.setrlimit(resource.RLIMIT_CPU, (actual_time_limit, actual_time_limit))
+        try:
+            resource.setrlimit(resource.RLIMIT_DATA, (mem_limit, mem_limit))
+        except:
+            if sys.platform != 'darwin':
+                raise Exception('failed to limit memory usage')
+        if file_limit is not None:
+            resource.setrlimit(resource.RLIMIT_FSIZE, (file_limit, file_limit))
         with open(input_fn, 'r') as in_file:
             os.dup2(in_file.fileno(), 0)
         with open(output_fn, 'w') as out_file:
@@ -49,36 +56,37 @@ def run_solution(sol_fn, input_fn,
     #result = Result(running_time = rusage.ru_utime)
     result = Result(running_time = rusage.ru_utime+rusage.ru_stime)
 
+    if rusage.ru_maxrss > mem_limit:
+        hints.give_hint('bad-memory-limit')
+
     # ranido changed
     #if os.WIFSIGNALED(status) and os.WTERMSIG(status) == signal.SIGXCPU:
     if result.running_time > time_limit:
         result.status = 'TLE'
-    elif os.WEXITSTATUS(status) != 0:
+    elif not os.WIFEXITED(status) or os.WEXITSTATUS(status) != 0:
         result.status = 'RE'
-        result.detail = 'failed'
+        result.detail = '[failed - exit code: %d]' % os.WEXITSTATUS(status)
         hints.give_hint('solution-failed')
         if os.WIFSIGNALED(status) and os.WTERMSIG(status) == signal.SIGSEGV:
             hints.give_hint('solution-SIGSEGV')
-            result.detail = 'SIGSEGV'
+            result.detail = '[SIGSEGV]'
         elif os.WIFSIGNALED(status) and os.WTERMSIG(status) == signal.SIGABRT:
             hints.give_hint('solution-SIGABRT')
-            result.detail = 'SIGABRT'
+            result.detail = '[SIGABRT]'
     elif reference_fn:
-        if comparator_fn:
-            devnull = open(os.devnull, 'w')
-            returncode = subprocess.call([comparator_fn, output_fn, reference_fn, input_fn], stdout = devnull, stderr = devnull)
-            devnull.close()
-            if returncode == 4:
+        if judge_cmd is not None:
+            if subprocess.call([judge_cmd, output_fn, reference_fn, input_fn],
+                             stdout = NamedTemporaryFile(),
+                             stderr = NamedTemporaryFile()) == 4:
                 result.status = 'AC'
             else:
                 result.status = 'WA'
+        elif subprocess.call(['diff', '-c', '-i', '-b', '-B', '-w', reference_fn, output_fn],
+                           stdout = NamedTemporaryFile(),
+                           stderr = NamedTemporaryFile()) == 0:
+            result.status = 'AC'
         else:
-            if subprocess.call(['diff', reference_fn, output_fn],
-                               stdout = NamedTemporaryFile(),
-                               stderr = NamedTemporaryFile()) == 0:
-                result.status = 'AC'
-            else:
-                result.status = 'WA'
+            result.status = 'WA'
     else:
         result.status = 'OK'
 

@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage{amsmath}
-\usepackage[brazil]{babel}
+%\usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{indentfirst}
@@ -11,7 +11,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{ifthen}
-
+\usepackage[table]{xcolor}
 \usepackage{epsfig}
 \usepackage{tikz}
 
@@ -25,122 +25,44 @@
 
 \setlength{\textwidth}{16.5cm}
 \setlength{\textheight}{25.5cm}
-
 \setlength{\voffset}{-1in}
 
-\newcommand{\insereArquivo}[1]{
+
+\newcommand{\insertFile}[1]{
 \ifnum0\pdffilesize{\CWD/#1}>0
 	\VerbatimInput[xleftmargin=0mm,numbers=none,obeytabs=true]{\CWD/#1}\vspace{.5em}
 \fi
 }
 
-\newcommand{\textoDiversasInstancias}{A entrada é composta por
-diversos casos de teste. }
+\newcommand{\theauthor}[1]
+{\vspace{-2mm}\small \begin{center} \emph{Author}: #1 \end{center}\vspace{4mm}}
 
 \newcommand{\arquivoProblema}[1]{\vspace{-0.3cm} \noindent {\em
 Arquivo: \texttt{#1.[c|cpp|java]} \\}}
 
-\newcommand{\textoSaidaPadrao}{\vspace{0.2cm} \noindent \emph{A
-saída deve ser escrita na saída padrăo. }}
-
-\newcommand{\textoEntradaPadrao}{\vspace{0.2cm} \noindent \emph{A
-entrada deve ser lida da entrada padrăo. }}
-
 \newcommand{\incat}[1]{sample-#1.in}
 \newcommand{\solcat}[1]{sample-#1.sol}
 \newcounter{count}
+
+\newcommand{\sampleio}{
+\vspace{4pt}
 \setcounter{count}{0}
-
-\newcommand{\exemplo}{
-\vspace{0.3cm}
-
-% first check if sample.in is present (maratona)
-\IfFileExists{\CWD/sample.in} {
-  \begin{minipage}[c]{0.9\textwidth}
-  \begin{center}
-  \begin{tabular}{|l|l|} \hline
-  \begin{minipage}[t]{0.5\textwidth}
-  \bf{Exemplo de Entrada}
-  \insereArquivo{sample.in}
-  \end{minipage}
-  &
-  \begin{minipage}[t]{0.5\textwidth}
-  \bf{Saída para o Exemplo de Entrada}
-  \insereArquivo{sample.sol}
-  \end{minipage}\\
-  \hline
-  \end{tabular}
-  \end{center}
-  \end{minipage} % leave next line empty
-
-  }{} % IfFileExists
-
-% then check if sample-n.in is present (obi)
 \whiledo{\value{count}<10}{
   \addtocounter{count}{1}
   \IfFileExists{\CWD/\incat{\thecount}} {
-  \begin{minipage}[c]{0.9\textwidth}
-  \begin{center}
-  \begin{tabular}{|l|l|} \hline
-  \begin{minipage}[t]{0.5\textwidth}
-  \bf{Entrada}
-  \insereArquivo{\incat{\thecount}}
-  \end{minipage}
-  &
-  \begin{minipage}[t]{0.5\textwidth}
-  \bf{Saída}
-  \insereArquivo{\solcat{\thecount}}
-  \end{minipage}\\
-  \hline
-  \end{tabular}
-  \end{center}
-  \end{minipage} % leave next line empty
-
-  }{} % IfFileExists
-} % while
-
-} % exemplo
-
-\newcommand{\exemplolongoesquerda}{
-\vspace{0.3cm}
-
-\setcounter{count}{0}
-% first check if sample.in is present (maratona)
-\IfFileExists{\CWD/sample.in} {
-  \begin{minipage}[c]{0.9\textwidth}
-  \begin{center}
-  \begin{tabular}{|l|l|} \hline
-  \begin{minipage}[t]{0.5\textwidth}
-  \bf{Exemplo de Entrada}
-  \insereArquivo{sample.in}
-  \end{minipage}
-  &
-  \begin{minipage}[t]{0.5\textwidth}
-  \bf{Saída para o Exemplo de Entrada}
-  \insereArquivo{sample.sol}
-  \end{minipage}\\
-  \hline
-  \end{tabular}
-  \end{center}
-  \end{minipage} % leave next line empty
-
-  }{} % IfFileExists
-
-% then check if sample-n.in is present (obi)
-\whiledo{\value{count}<10}{
-  \addtocounter{count}{1}
-  \IfFileExists{\CWD/\incat{\thecount}} {
+  \vspace{2pt}
+  \noindent
   \begin{minipage}[c]{0.95\textwidth}
   \begin{center}
   \begin{tabular}{|l|l|} \hline
-  \begin{minipage}[t]{0.88\textwidth}
-  \bf{Entrada}
-  \insereArquivo{\incat{\thecount}}
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{\small \strSampleinput \thecount}
+  \insertFile{\incat{\thecount}}
   \end{minipage}
   &
-  \begin{minipage}[t]{0.12\textwidth}
-  \bf{Saída}
-  \insereArquivo{\solcat{\thecount}}
+  \begin{minipage}[t]{0.5\textwidth}
+  \bf{\small \strSampleoutput \thecount}
+  \insertFile{\solcat{\thecount}}
   \end{minipage}\\
   \hline
   \end{tabular}
@@ -150,9 +72,58 @@ entrada deve ser lida da entrada padrăo. }}
   }{} % IfFileExists
 } % while
 
-} % exemplolongoesquerda
-
+} % sampleio
 
 \newcommand{\incluir}[1]{
 \input{#1}
 }
+
+% Language definitions (choose portuguese/english)
+\def\lang{english}
+%\def\lang{portuguese}
+
+\def\english{english}
+\ifx\lang\english
+   \def\strInput{Input}
+   \def\strInputdescline{The input consists of a single line that contains }
+   \def\strOutput{Output}
+   \def\strOutputdescline{Output a single line with }
+   \def\strOutputfloatnoticeA{The result must be output as a rational number with exactly }
+   \def\strOutputfloatnoticeB{digits after the decimal point, rounded if necessary.}
+   \def\strSampleinput{Sample input }
+   \def\strSampleoutput{Sample output }
+\else
+  \def\strInput{Entrada}
+   \def\strInputdescline{A entrada consiste de uma única linha que contém }
+   \def\strOutput{Saída}
+   \def\strOutputdescline{Seu programa deve produzir uma única linha com }
+   \def\strOutputfloatnoticeA{O resultado deve ser escrito como um número racional com exatamente }
+   \def\strOutputfloatnoticeB{dígitos após o ponto decimal, arredondado se necessário.}
+   \def\strSampleinput{Exemplo de entrada }
+   \def\strSampleoutput{Exemplo de saída }
+\fi
+
+\newcommand{\inputdesc}[2]{
+     \subsection*{\strInput}
+     {#1} }
+
+\newcommand{\inputdescline}[1]{
+     \subsection*{\strInput}
+     \strInputdescline {#1} }
+
+\newcommand{\outputdesc}[1]{
+     \subsection*{\strOutput}
+     {#1}}
+
+\newcommand{\outputdescline}[1]{\outputdesc{\strOutputdescline {#1}} }
+\newcommand{\outputfloatnotice}[1]{\strOutputfloatnoticeA {#1} \strOutputfloatnoticeB{ }}
+
+%\newcommand{\lowercaseletters}[2]{{#1} is a non-empty string of at most ${#2}$ characters;
+%     each character is one of the $26$ standard lowercase letters
+%     (from \literalchar{a} to \literalchar{z}).}
+
+\newcommand{\literaltext}[1]{\mbox{``\texttt{#1}''}}
+\newcommand{\literalchar}[1]{\literaltext{#1}}
+
+\newcommand{\Ldots}[3]{{#1}, {#2}, \ldots, {#3}}
+\newcommand{\iteration}[4]{${#1}=\Ldots{#2}{#3}{#4}$}

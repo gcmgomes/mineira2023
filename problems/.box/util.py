@@ -1,11 +1,11 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # encoding: utf-8
 
 import os
 import os.path
 
 def delete_file(fn):
-    u"Delete file `fn` or return silently if it doesn't exist."
+    "Delete file `fn` or return silently if it doesn't exist."
     try:
         os.unlink(fn)
     except OSError:

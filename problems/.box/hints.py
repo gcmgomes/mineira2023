@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # encoding: utf-8
 
 import ui
@@ -35,11 +35,15 @@ HINTS = {
     'pdflatex':
     'The pdflatex application is needed to generate the problem statements. '
     'Make sure it can be found in your $PATH (e.g. `which pdflatex`).',
+
+    'bad-memory-limit':
+    'Failed to limit amount of memory used by some of the processes.',
+
 }
 useful_hints = []
 
 def give_hint(hint):
-    u"Give `hint` to the user after execution is complete."
+    "Give `hint` to the user after execution is complete."
     assert hint in HINTS
     if hint not in useful_hints:
         useful_hints.append(hint)

@@ -1,7 +1,7 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # encoding: utf-8
 
-import os,sys
+import os, sys
 import os.path
 import subprocess
 import shutil
@@ -10,22 +10,22 @@ from util import change_extension
 import ui
 
 def build_pdf(output_fn, *tex_fns):
-    u"Compile the `tex_fns` files to a PDF named `output_fn`."
+    "Compile the `tex_fns` files to a PDF named `output_fn`."
     if os.path.exists('.build'): 
         shutil.rmtree('.build') # remove old content
     os.mkdir('.build')
         
-    tex_input = NamedTemporaryFile(suffix = '.tex', delete = False)
+    tex_input = NamedTemporaryFile(mode = 'w', suffix = '.tex', delete = False)
     with open('.box/defs.tex', 'r') as tex_defs:
         tex_input.write(tex_defs.read())
-    print >> tex_input, '\\newcommand{\\CWD}{.}'
-    print >> tex_input, '\\begin{document}'
+    print('\\newcommand{\\CWD}{.}', file=tex_input)
+    print('\\begin{document}', file=tex_input)
     for tex_fn in tex_fns:
-        print >> tex_input, '\\renewcommand{\\CWD}{%s}' % \
-                os.path.dirname(tex_fn)
+        print('\\renewcommand{\\CWD}{%s}' % \
+                os.path.dirname(tex_fn), file=tex_input)
         with open(tex_fn, 'r') as tex_file:
             tex_input.write(tex_file.read())
-    print >> tex_input, '\\end{document}'
+    print('\\end{document}', file=tex_input)
     tex_input.close()
 
     log_fn = change_extension(output_fn, 'log')
