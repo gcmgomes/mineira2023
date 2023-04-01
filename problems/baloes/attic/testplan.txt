@@ -1,0 +1,44 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+
+# Manual cases
+2     ; copy attic/manual-1.in
+2     ; copy attic/manual-2.in
+2     ; copy attic/manual-3.in
+
+# Use generators
+3     ; gen_random.exe 18335 19
+3     ; gen_random.exe 3886 19
+3     ; gen_random.exe 167 16
+3     ; gen_random.exe 19402 17
+3     ; gen_random.exe 20966 20
+3     ; gen_random.exe 5843 16
+3     ; gen_random.exe 23687 16
+3     ; gen_random.exe 1279 16
+3     ; gen_random.exe 159 16
+3     ; gen_random.exe 19917 17
+3     ; gen_random.exe 6208 20
+3     ; gen_random.exe 25685 19
+3     ; gen_random.exe 20109 16
+3     ; gen_random.exe 21540 18
+3     ; gen_random.exe 5182 20
+3     ; gen_random.exe 24641 17
+3     ; gen_random.exe 21947 18
+3     ; gen_random.exe 32761 19
+3     ; gen_random.exe 19900 19
+3     ; gen_random.exe 13665 20
+3     ; gen_random.exe 12717 18
+3     ; gen_random.exe 27221 17
+3     ; gen_random.exe 17391 16
+3     ; gen_random.exe 26822 16
+3     ; gen_random.exe 5580 20
+3     ; gen_random.exe 30496 20
+3     ; gen_random.exe 28810 16
+3     ; gen_random.exe 9822 18
+3     ; gen_random.exe 10167 16
+3     ; gen_random.exe 10519 19
+3     ; gen_random.exe 6634 16
