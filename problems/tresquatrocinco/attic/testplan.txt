@@ -6,24 +6,103 @@
 1     ; copy documents/sample-1.in
 
 # Use generators
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
-2     ; gen_random.exe 1000 1000
+2     ; gen.exe 1
+2     ; gen.exe 2
+2     ; gen.exe 3
+2     ; gen.exe 4
+2     ; gen.exe 5
+2     ; gen.exe 6
+2     ; gen.exe 7
+2     ; gen.exe 8
+2     ; gen.exe 9
+2     ; gen.exe 10
+2     ; gen.exe 11
+2     ; gen.exe 12
+2     ; gen.exe 13
+2     ; gen.exe 14
+2     ; gen.exe 15
+2     ; gen.exe 16
+2     ; gen.exe 17
+2     ; gen.exe 18
+2     ; gen.exe 19
+2     ; gen.exe 20
+2     ; gen.exe 21
+2     ; gen.exe 22
+2     ; gen.exe 23
+2     ; gen.exe 24
+2     ; gen.exe 25
+2     ; gen.exe 26
+2     ; gen.exe 27
+2     ; gen.exe 28
+2     ; gen.exe 29
+2     ; gen.exe 30
+2     ; gen.exe 31
+2     ; gen.exe 32
+2     ; gen.exe 33
+2     ; gen.exe 34
+2     ; gen.exe 35
+2     ; gen.exe 36
+2     ; gen.exe 37
+2     ; gen.exe 38
+2     ; gen.exe 39
+2     ; gen.exe 40
+2     ; gen.exe 41
+2     ; gen.exe 42
+2     ; gen.exe 43
+2     ; gen.exe 44
+2     ; gen.exe 45
+2     ; gen.exe 46
+2     ; gen.exe 47
+2     ; gen.exe 48
+2     ; gen.exe 49
+2     ; gen.exe 50
+2     ; gen.exe 51
+2     ; gen.exe 52
+2     ; gen.exe 53
+2     ; gen.exe 54
+2     ; gen.exe 55
+2     ; gen.exe 56
+2     ; gen.exe 57
+2     ; gen.exe 58
+2     ; gen.exe 59
+2     ; gen.exe 60
+2     ; gen.exe 61
+2     ; gen.exe 62
+2     ; gen.exe 63
+2     ; gen.exe 64
+2     ; gen.exe 65
+2     ; gen.exe 66
+2     ; gen.exe 67
+2     ; gen.exe 68
+2     ; gen.exe 69
+2     ; gen.exe 70
+2     ; gen.exe 71
+2     ; gen.exe 72
+2     ; gen.exe 73
+2     ; gen.exe 74
+2     ; gen.exe 75
+2     ; gen.exe 76
+2     ; gen.exe 77
+2     ; gen.exe 78
+2     ; gen.exe 79
+2     ; gen.exe 80
+2     ; gen.exe 81
+2     ; gen.exe 82
+2     ; gen.exe 83
+2     ; gen.exe 84
+2     ; gen.exe 85
+2     ; gen.exe 86
+2     ; gen.exe 87
+2     ; gen.exe 88
+2     ; gen.exe 89
+2     ; gen.exe 90
+2     ; gen.exe 91
+2     ; gen.exe 92
+2     ; gen.exe 93
+2     ; gen.exe 94
+2     ; gen.exe 95
+2     ; gen.exe 96
+2     ; gen.exe 97
+2     ; gen.exe 98
+2     ; gen.exe 99
+2     ; gen.exe 100

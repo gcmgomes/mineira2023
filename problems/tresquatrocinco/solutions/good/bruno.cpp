@@ -14,5 +14,5 @@ int main() { _
 	int r; cin >> r;
 	double th = atan(3.0 / 4.0);
 	cout << fixed << setprecision(12) << r * r * th + r * r * sin(2*th) / 2.0 << endl;
-	exit(0);
+	return 0;
 }
