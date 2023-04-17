@@ -1,0 +1,56 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+
+# Use generators, most answer 0.
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+2     ; gen_random.exe 1000 4
+
+# Use pre-generated mid tests, all answer 1.
+3     ; copy attic/mid-1.in
+3     ; copy attic/mid-2.in
+3     ; copy attic/mid-3.in
+3     ; copy attic/mid-4.in
+3     ; copy attic/mid-5.in
+3     ; copy attic/mid-6.in
+3     ; copy attic/mid-7.in
+3     ; copy attic/mid-8.in
+3     ; copy attic/mid-9.in
+3     ; copy attic/mid-10.in
+3     ; copy attic/mid-11.in
+
+# Use pre-generated large tests, all answer 1.
+4     ; copy attic/large-1.in
+4     ; copy attic/large-2.in
+4     ; copy attic/large-3.in
+4     ; copy attic/large-4.in
+4     ; copy attic/large-5.in
+4     ; copy attic/large-6.in
+4     ; copy attic/large-7.in
+4     ; copy attic/large-8.in
+4     ; copy attic/large-9.in
+4     ; copy attic/large-10.in
+4     ; copy attic/large-11.in
+4     ; copy attic/large-12.in
+4     ; copy attic/large-13.in
+4     ; copy attic/large-14.in
+
+# Slow instances.
+5     ; copy attic/slow-1.in
