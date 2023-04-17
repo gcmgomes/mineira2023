@@ -52,5 +52,6 @@
 4     ; copy attic/large-13.in
 4     ; copy attic/large-14.in
 
-# Slow instances.
+# Breaking instances.
 5     ; copy attic/slow-1.in
+5     ; copy attic/wrong-1.in

@@ -17,23 +17,22 @@ struct Node {
 
 int DFS(const vector<Node>& graph) {
   vector<int> color(graph.size(), -1);
-  vector<int> prev(graph.size(), -1);
   for (int i = 0; i < graph.size(); i++) {
     if (color[i] != -1) {
       continue;
     }
+    color[i] = 0;
     stack<int> s;
     s.push(0);
     while (s.size()) {
       int v = s.top();
-      color[v] = (prev[v] == -1) ? 0 : 1 - color[prev[v]];
       s.pop();
       for (auto& u : graph[v].viz) {
         if (color[u] == color[v]) {
           return 0;
         }
         if (color[u] == -1) {
-          prev[u] = v;
+          color[u] = 1 - color[v];
           s.push(u);
         }
       }
