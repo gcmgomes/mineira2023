@@ -23,8 +23,11 @@ int main() {
     v[j] = dedos_adriana;
   }
 
-  for (int dedos_necessarios : v) 
-    std::cout << dedos_necessarios << ' ';
+  for (int i = 0; i < v.size(); i++) {
+    std::cout << v[i];
+    if (i < v.size() - 1)
+      std::cout << ' ';
+  }
   std::cout << std::endl;
 
   return 0;

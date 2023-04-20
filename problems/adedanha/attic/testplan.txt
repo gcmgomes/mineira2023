@@ -1,29 +1,31 @@
-# This is a sample test plan
-# the first column specifies the test group
-# the second column specifies the command to be executed
+# this file contains the test plan
+# format: test group ; command to be executed
+# script build-tests calls gen_tests.py, which copies samples and
+# executes the command gen_tests.py
 
-# Use samples as tests
+# use handmade tests
 1     ; copy documents/sample-1.in
 1     ; copy documents/sample-2.in
+# samples from the statement were copied in script build-tests
 
-# Use generators
-2     ; gen_random.exe 1 0
-2     ; gen_random.exe 1 20
-2     ; gen_random.exe 1 20
-2     ; gen_random.exe 5 0
-2     ; gen_random.exe 5 2
-2     ; gen_random.exe 100 10
-2     ; gen_random.exe 100 20
-2     ; gen_random.exe 1000 2
-2     ; gen_random.exe 1000 10
-2     ; gen_random.exe 1000 20
-2     ; gen_random.exe 10000 1
-2     ; gen_random.exe 10000 10
-2     ; gen_random.exe 10000 20
-2     ; gen_random.exe 100000 20
-2     ; gen_random.exe 500000 20
-2     ; gen_random.exe 500000 20
-2     ; gen_random.exe 500000 20
-2     ; gen_random.exe 500000 20
-2     ; gen_random.exe 500000 20
-2     ; gen_random.exe 500000 20
+# use generators
+2     ; py_generator.exe 8721 1 0
+2     ; py_generator.exe 14 2 20
+2     ; py_generator.exe 476 2 20
+2     ; py_generator.exe 987 5 0
+2     ; py_generator.exe 1237 5 2
+2     ; py_generator.exe 4947 100 10
+2     ; py_generator.exe 123 100 20
+2     ; py_generator.exe 645 1000 2
+2     ; py_generator.exe 8754 1000 10
+2     ; py_generator.exe 9843 1000 20
+2     ; py_generator.exe 35432 10000 1
+2     ; py_generator.exe 543 10000 10
+2     ; py_generator.exe 90324 10000 20
+2     ; py_generator.exe 754 100000 20
+2     ; py_generator.exe 7656 100000 20
+2     ; py_generator.exe 83584 100000 20
+2     ; py_generator.exe 4545 100000 20
+2     ; py_generator.exe 5431 100000 20
+2     ; py_generator.exe 1111 100000 20
+2     ; py_generator.exe 12376 100000 20
