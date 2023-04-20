@@ -1,0 +1,39 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
+
+Após inventar o avião, um dos maiores mineiros de todos os tempos, Alberto Santos-Dumont precisava testar sua invenção!
+
+Para melhorar as chances de decolar com sucesso o seu lendário avião, o 14-bis, Santos-Dumont precisava de uma pista de decolagem que fosse bastante reta e o mais comprida possível. Uma pista de decolagem é descrita como uma sequência de números (representando a altura de cada trecho da pista) e esta é considerada reta se a diferença em valor absoluto entre duas posições adjacentes nessa sequência não é maior que um (não queremos estragar o trem de pouso da nossa querida aeronave de papel com terrenos acidentados!).
+
+Dado um mapa topográfico da área, descrito como uma matriz NxM, imprima o tamanho da maior pista de decolagem possível, sendo que as pistas de decolagem podem ser no sentido norte-sul (colunas da matriz) ou leste-oeste (linhas da matriz).
+
+%
+% For input, use one of the following
+%
+\inputdesc{
+  A primeira linha conterá dois números $N$ e $M$ que representam o número de linhas e colunas da matriz, respectivamente.
+  
+  Depois disso teremos $N$ linhas, cada uma delas contendo $M$ números inteiros $a_{i, j}$, onde $a_{i, j}$ representa o altura do terreno na linha $i$ e coluna $j$ da matriz.
+
+  $N, M \leq 500$, $a_{i, j} \leq 10$.
+}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{
+  Imprima um núumero que representa o tamanho da maior pista de pouso para o 14-bis.
+}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio

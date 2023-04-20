@@ -4,8 +4,6 @@
 # executes the command gen_tests.py
 
 # use handmade tests
-1     ; copy documents/sample-1.in
-1     ; copy documents/sample-2.in
 # samples from the statement were copied in script build-tests
 
 # use generators
