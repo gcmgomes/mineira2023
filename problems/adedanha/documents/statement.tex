@@ -1,10 +1,10 @@
-Adriana vai jogar Banco Imobiliário com seus amigos e, para decidir quem começa jogando, vão jogar adedanha.
+Adriana e seus amigos estavam brincando e uma senhora os pediu para capinar seu lote. As crianças preferem brincar mas, como são educadas, vão escolher uma das crianças para capinar o lote da senhora. Para escolher quem capinará, jogarão adedanha.
 
-Adedanha funciona da seguinte forma: todas as crianças esticam alguns dedos e o número de dedos esticados (um número de $0$ a $20$, dedos do pé também são dedos!) de cada criança são somados para um valor S. Depois disso conta-se circularmente as $N$ crianças ($0, 1, \ldots, N - 2, N - 1, 0, 1, \ldots$) partindo da criança $0$ (Adriana). Depois de contarmos $S$ vezes, a criança escolhida começa no Banco Imobiliário.
+Adedanha funciona da seguinte forma: todas as crianças esticam alguns dedos e o número de dedos esticados (um número de $0$ a $20$, dedos do pé também são dedos!) de cada criança são somados para um valor S. Depois disso conta-se circularmente as $N$ crianças ($0, 1, \ldots, N - 2, N - 1, 0, 1, \ldots$) partindo da criança $0$ (Adriana). Depois de contarmos $S$ vezes, a criança escolhida capinará.
 
-Adriana é muito esperta e, para ter vantagem no videogame, ela decidiu trapacear: ela só vai decidir o número de dedos que vai esticar logo depois de ver o número que cada uma das outras crianças esticou (Adriana consegue contar dedos muito rápido, as outras crianças nem percebem sua trapaça!).
+Adriana é muito esperta e, para escolher quem capina, ela decidiu trapacear: ela só vai decidir o número de dedos que vai esticar logo depois de ver o número que cada uma das outras crianças esticou (Adriana consegue contar dedos muito rápido, as outras crianças nem percebem sua trapaça!).
 
-Dada a sua informação privilegiada Adriana quer saber, para cada criança, se ela consegue escolher algum número de dedos para esticar de forma que esta criança comece (se vários números de dedos esticados forem possíveis para fazer certa criança começar, imprima o menor deles) ou caso seja impossível, -1.
+Dada a sua informação privilegiada Adriana quer saber, para cada criança, se ela consegue escolher algum número de dedos para esticar de forma que esta criança capine (se vários números de dedos esticados forem possíveis para fazer certa criança começar, imprima o menor deles) ou caso seja impossível, -1.
 
 \section*{Entrada}
 
@@ -13,7 +13,7 @@ A entrada contém duas linhas, a primeira contém um inteiro $N$, o número de c
 Depois disso temos uma linha com $N - 1$ inteiros entre $0$ e $20$, o número de dedos que as crianças $1,\ldots,N - 1$ esticou (todas as crianças menos Adriana). 
 \section*{Saída}
 
-A saída deve conter $N$ números $d_0, d_1, \ldots, d_{n - 1}$. O número $d_i$ deve ser o menos número de dedos que Adriana deve esticar para que a criança $i$ comece jogando Banco Imobiliário e $-1$ caso seja impossível que $i$ comece.
+A saída deve conter $N$ números $d_0, d_1, \ldots, d_{n - 1}$. O número $d_i$ deve ser o menos número de dedos que Adriana deve esticar para que a criança $i$ capine o lote e $-1$ caso seja impossível que $i$ capine.
 
 \section*{Restrições}
 
