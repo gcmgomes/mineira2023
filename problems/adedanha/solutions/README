@@ -1,0 +1,44 @@
+--------------------
+Directory structure
+--------------------
+
+Put in the directory "good" solutions that should be used to
+calculate the time limits for the problem.
+
+Put in the directory "pass" solutions that should execute within
+the time limit calculated for the problem but are not particularly
+efficient (algorithm or implementation), and therefore should not be
+considered to calculate the time limits for the problem.
+
+Put in the directory "wrong" solutions that must fail (that is, at
+least one test should make the solution fail).
+
+Put in the directory "slow" solutions that must timeout (that is, at
+least one test should make the solution timeout).
+
+--------------------
+Naming the solutions
+--------------------
+
+Name your solution with your name, for example
+
+myname.cpp or myname.java
+
+You don't need to include the name of the problem in the name of the
+solution.
+
+If appropriate, include in the name information about the complexity
+of the solution:
+
+myname-n3.c, myname-bfs.py
+
+Do not use the same name for different languages, as box will get
+confused. If necessary, include also the language in the name of the
+solution:
+
+myname-n3.cpp, myname-n3-java.java, myname-n3-py3.py
+
+For solutions in python, the first line must be 
+
+#!/usr/bin/env python3
+
