@@ -1,6 +1,8 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+#define _ std::ios_base::sync_with_stdio(0);std::cin.tie(0);
 
 int solve(const std::vector<std::vector<int>>& a) {
     int ans = 0;
@@ -17,7 +19,7 @@ int solve(const std::vector<std::vector<int>>& a) {
     return ans;
 }
 
-int main() {
+int main() { _
     int n, m;
     std::cin >> n >> m;
     std::vector<std::vector<int>> at(m, std::vector<int>(n));
