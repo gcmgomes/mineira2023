@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  20 APR 2023 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  22 APR 2023 11:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/tmp/tmpfe7xyf33.tex
-(/tmp/tmpfe7xyf33.tex
+**/tmp/tmpgwol5qt6.tex
+(/tmp/tmpgwol5qt6.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/usr/local/texlive/2023basic/texmf-dist/tex/latex/base/article.cls
@@ -798,11 +798,12 @@ ers/bernardoamorim/Library/texlive/2023basic/texmf-var/fonts/pk/ljfour/jknappen
 amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb>
-Output written on .build/output.pdf (1 page, 60233 bytes).
+e1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb>
+Output written on .build/output.pdf (1 page, 69127 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
