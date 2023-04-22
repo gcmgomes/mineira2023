@@ -10,10 +10,4 @@ from random import seed, randint
 # based on the input arguments
 seed('|'.join(sys.argv[1:]))
 
-MIN=int(sys.argv[1])
-MAX=int(sys.argv[2])
-
-n = randint(MIN, MAX)
-print(n)
-for i in range(n):
-    print(randint(1, n))
+print(randint(1, 5000))

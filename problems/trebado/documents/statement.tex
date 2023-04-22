@@ -7,34 +7,21 @@
 %   \centering
 %   \includegraphics{\CWD/images/example.pdf}
 % \end{figure}
+“O andar do bêbado” é um problema muito conhecido na matemática. Nesse problema temos um bêbado iniciando na origem do plano 2D e, a cada momento, ele escolhe aleatóriamente uma direção para andar: norte (N), sul (S), leste (L) ou oeste (O). Apesar do andar caótico, é matemáticamente garantido que o bêbado sempre volta pra a origem, sua casa!
 
-Put your statement here, using the macros below.
+Aqui temos um problema ligeiramente diferente, além de andar nas direções N, S, L e O, em um movimento o bêbado também pode andar na direção nordeste (NE), sudeste (SE), noroeste (NO) e sudoeste e (SO). 
 
+Dado um número $K$, o número de passos do bêbado, imprima de quantas formas o bêbado pode fazer $K$ movimentos e terminar em casa módulo $1000000007$ ($10^9 + 7$).
 %
 % For input, use one of the following
 %
-\inputdesc{The first line contains five integers $A_1$, $B_1$, $C_1$,
-  $D_1$ and $E_1$ ($0 \leq A_1,B_1,C_1,D_1,E_1 \leq 1$), representing
-  the connection points labeled \emph{a},\emph{b}, \emph{c}, \emph{d}
-  and \emph{e} of the first connector in the pair. The second line
-  contains five integers $A_2$, $B_2$, $C_2$, $D_2$ and $E_2$ ($0 \leq
-  A_2,B_2,C_2,D_2,E_2 \leq 1$), representing the connection points
-  labeled \emph{a},\emph{b}, \emph{c}, \emph{d} and \emph{e} of the
-  second connector in the pair. In the input, a $0$ represents an outlet an
-  a $1$ represents a plug.}
 
-\inputdescline{an integer $N$ ($1 \le N \le 10^{100}$).}
-
+\inputdesc{A entrada é composta por um único inteiro $K$ ($1 \leq K \leq 5000$).}
 %
 % For output, use one of the following
 %
 
-\outputdesc{Output a line containing the uppercase letter \literalchar{Y}
-if it is possible to satisfy the bear; otherwise
-output the uppercase letter \literalchar{N}.}
-
-\outputdescline{an integer indicating the number of eleven-multiple-anagrams of $N$.
-Because this number can be very large, output the remainder of dividing it by $10^9 + 7$.}
+\outputdescline{A saída deve ser composta por um único número: o número de formas que o bêbado pode voltar para a origem depois de $K$ movimentos módulo $10^9 + 7$.}
 
 %\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
 %in the documents directory and include them as samples.
