@@ -52,7 +52,7 @@ int main() {
   for (auto& line : X) {
     best = max(best, LineSweep(line));
   }
-  for (int i = 0; i < N; i++) {
+  for (int i = 0; i < M; i++) {
     best = max(best, ColSweep(X, i));
   }
   cout << best << endl;
