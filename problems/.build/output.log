@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  22 APR 2023 16:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.7)  22 APR 2023 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/tmp/tmpifow5d8_.tex
-(/tmp/tmpifow5d8_.tex
+**/tmp/tmpf99psr10.tex
+(/tmp/tmpf99psr10.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/usr/local/texlive/2023basic/texmf-dist/tex/latex/base/article.cls
@@ -746,32 +746,38 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+<trebado/documents/andar-trebado-img.png, id=7, 212.795pt x 203.76125pt>
+File: trebado/documents/andar-trebado-img.png Graphic file (type png)
+<use trebado/documents/andar-trebado-img.png>
+Package pdftex.def Info: trebado/documents/andar-trebado-img.png  used on input
+ line 150.
+(pdftex.def)             Requested size: 142.26378pt x 136.23016pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-61.
+67.
  (/usr/local/texlive/2023basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 161.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 167.
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 161--161
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 167--167
  [] 
  []
 
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 161--161
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 167--167
  [] 
  []
 
 
-Overfull \hbox (25.19997pt too wide) in paragraph at lines 161--161
+Overfull \hbox (25.19997pt too wide) in paragraph at lines 167--167
  [] 
  []
 
 [1
 
-{/usr/local/texlive/2023basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(.build/output.aux)
+{/usr/local/texlive/2023basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./
+trebado/documents/andar-trebado-img.png>] (.build/output.aux)
 
 Package rerunfilecheck Warning: File `output.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
@@ -782,10 +788,10 @@ Package rerunfilecheck Info: Checksums for `output.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20431 strings out of 477476
- 385113 string characters out of 5824245
- 1860388 words of memory out of 5000000
- 40323 multiletter control sequences out of 15000+600000
+ 20443 strings out of 477476
+ 385447 string characters out of 5824245
+ 1861388 words of memory out of 5000000
+ 40332 multiletter control sequences out of 15000+600000
  519882 words of font info for 50 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  84i,14n,80p,403b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -799,10 +805,10 @@ amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on .build/output.pdf (1 page, 58466 bytes).
+Output written on .build/output.pdf (1 page, 63201 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 137 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
