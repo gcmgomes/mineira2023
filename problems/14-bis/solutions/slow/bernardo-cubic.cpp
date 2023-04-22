@@ -14,11 +14,11 @@ int main() {
         }
     }
 
-    int ans = 0;
+    int ans = 1;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            for (int j2 = j; j2 < m; j2++) {
-                if (j2 != j and abs(a[i][j2] - a[i][j2 - 1]) > 1)
+            for (int j2 = j + 1; j2 < m; j2++) {
+                if (abs(a[i][j2] - a[i][j2 - 1]) > 1)
                     break;
                 ans = std::max(ans, j2 - j + 1);
             }
@@ -26,8 +26,8 @@ int main() {
     }
     for (int j = 0; j < m; j++) {
         for (int i = 0; i < n; i++) {
-            for (int i2 =i; i2 < n; i2++) {
-                if (i2 != i and abs(a[i2][j] - a[i2 - 1][j]) > 1)
+            for (int i2 = i + 1; i2 < n; i2++) {
+                if (abs(a[i2][j] - a[i2 - 1][j]) > 1)
                     break;
                 ans = std::max(ans, i2 - i + 1);
             }

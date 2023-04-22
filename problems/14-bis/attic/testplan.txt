@@ -7,23 +7,27 @@
 # samples from the statement were copied in script build-tests
 
 # use generators
-2     ; py_generator.exe 321   1   500 10 
-2     ; py_generator.exe 12736 500 1   10
-2     ; py_generator.exe 5665  500 500 5
-2     ; py_generator.exe 54645 20  20  10
-2     ; py_generator.exe 321   20  20  5
-2     ; py_generator.exe 90736 20  20  2
-2     ; py_generator.exe 65    500 500 1
-2     ; py_generator.exe 51945 500 500 2
-2     ; py_generator.exe 999   500 500 2
-2     ; py_generator.exe 12886 500 500 4
-2     ; py_generator.exe 5775  500 500 4
-2     ; py_generator.exe 33645 500 500 4
-2     ; py_generator.exe 391   500 500 10
-2     ; py_generator.exe 14036 500 500 10
-2     ; py_generator.exe 5005  500 500 10
-2     ; py_generator.exe 54905 500 500 10
-2     ; py_generator.exe 856   500 500 10
-2     ; py_generator.exe 19876 500 500 10
-2     ; py_generator.exe 5000  500 500 10
-2     ; py_generator.exe 91827 500 500 10
+2     ; py_generator.exe 54645 20     20     10
+2     ; py_generator.exe 321   20     20     5
+2     ; py_generator.exe 90736 20     20     2
+2     ; py_generator.exe 5665  447    447    5
+2     ; py_generator.exe 65    447    447    1
+2     ; py_generator.exe 51945 447    447    2
+2     ; py_generator.exe 321   1      200000 10 
+2     ; py_generator.exe 999   2      100000 10
+2     ; py_generator.exe 12886 4      50000  10
+2     ; py_generator.exe 5775  8      25000  10
+2     ; py_generator.exe 33645 16     12500  10
+2     ; py_generator.exe 391   32     6250   10
+2     ; py_generator.exe 14036 64     3125   10
+2     ; py_generator.exe 12736 128    1562   10
+2     ; py_generator.exe 5005  256    781    10
+2     ; py_generator.exe 54905 512    390    10
+2     ; py_generator.exe 856   1024   195    10
+2     ; py_generator.exe 19876 2048   97     10
+2     ; py_generator.exe 5000  4096   48     10
+2     ; py_generator.exe 91827 8192   24     10
+2     ; py_generator.exe 76    16384  12     10
+2     ; py_generator.exe 5111  32768  6      10
+2     ; py_generator.exe 90000 65536  3      10
+2     ; py_generator.exe 90000 200000 1      10
