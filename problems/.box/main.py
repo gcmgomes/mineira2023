@@ -91,7 +91,7 @@ def build_binaries(directory):
                 gcc, exe_fn, src_fn)
         elif src_fn.endswith('.cpp'):
             extra_cpp_includes = (' -I`pwd`/.box/resources') if 'solutions' not in src_dir else ''
-            cmd_line = '%s%s -g -O2 -std=gnu++20 -static -o %s %s' % (
+            cmd_line = '%s%s -g -O2 -std=gnu++17 -static -o %s %s' % (
                 gpp, extra_cpp_includes, exe_fn, src_fn)
         elif src_fn.endswith('.java'):
             cmd_line = ('javac -sourcepath %s -d %s %s'

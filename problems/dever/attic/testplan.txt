@@ -1,0 +1,36 @@
+# this file contains the test plan
+# format: test group ; command to be executed
+# script build-tests calls gen_tests.py, which copies samples and
+# executes the command gen_tests.py
+
+# use handmade tests
+# 1     ; copy attic/handmade/handmade-1.in
+# samples from the statement were copied in script build-tests
+
+2     ; corner.exe 1 1 v1
+
+# note that the sample c++ generator only takes two arguments
+# here we add dummy v1/v2 argument just to have different outputs for the same bounds
+# (as generators random engines use program args as seed)
+3     ; random.exe 1 1 v1
+3     ; random.exe 10 100 v1
+3     ; random.exe 10 100 v2
+3     ; random.exe 10 100 v3
+3     ; random.exe 10 100 v4
+3     ; random.exe 10 100 v5
+3     ; random.exe 10 100 v6
+3     ; random.exe 10 100 v7
+3     ; random.exe 10 100 v8
+3     ; random.exe 10 100 v9
+3     ; random.exe 10 100 v10
+3     ; random.exe 10000 100000 v1
+3     ; random.exe 10000 100000 v2
+3     ; random.exe 10000 100000 v3
+3     ; random.exe 10000 100000 v4
+3     ; random.exe 10000 100000 v5
+3     ; random.exe 10000 100000 v6
+3     ; random.exe 10000 100000 v7
+3     ; random.exe 10000 100000 v8
+3     ; random.exe 10000 100000 v9
+3     ; random.exe 10000 100000 v10
+3     ; prime.exe 100000 100000 v1
