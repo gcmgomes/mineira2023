@@ -30,8 +30,9 @@ int main() { _
 		int a, b; cin >> a >> b;
 		for (int i : fact(b / gcd(a, b))) tem[i] = 1;
 	}
+	if (accumulate(tem, tem + MAX, 0ll) == 0) return cout << 2 << endl, 0;
 	ll ans = 1;
 	for (int i = 0; i < MAX; i++) if (tem[i]) ans = ans * i % MOD;
-	cout << max(2ll, ans) << endl;
+	cout << ans << endl;
 	exit(0);
 }

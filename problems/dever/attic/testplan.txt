@@ -8,6 +8,7 @@
 # samples from the statement were copied in script build-tests
 
 2     ; corner.exe 1 1 v1
+2     ; corner2.exe 1 1 v1
 
 # note that the sample c++ generator only takes two arguments
 # here we add dummy v1/v2 argument just to have different outputs for the same bounds
