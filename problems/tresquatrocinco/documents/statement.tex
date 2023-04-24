@@ -1,28 +1,34 @@
-Senhor Figueiredo é um pescador famoso nos botecos da cidade de Lavras por causa das histórias duvidosas que ele conta sobre as aventuras dele no Rio Grande.
-Certa vez o jovem Ceconelli, vizinho do senhor Figueiredo, resolveu investigar a veracidade dos causos.
-Depois de muita insistência de Ceconelli, o senhor Figueiredo finalmente deixou que o jovem o acompanhasse, desde que carregasse os mantimentos e sua vara de pesca.
-Durante a pesca, Ceconelli acabou descobrindo o segredo do senhor Figueiredo sobre as histórias do pescador; o senhor Figueiredo multiplica a quantia fisgada por um fator fixo!
-Dados o fator multiplicativo usado pelo senhor Figueiredo e a quantidade real de peixes pescados, qual será a quantidade de peixes que o velho pescador irá contar para seus amigos no bar?
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
 
-\section*{Entrada}
+Felipe Mota é especialista no \textsc{enem}. Ele notou que, no \textsc{enem}, sempre aparece o triângulo com lados 3, 4 e 5 nas questôes. Ele se deparou com a seguinte questão do ENEM: dado uma circunferência de raio $R$, um triângulo semelhante ao com lados 3, 4 e 5 é colocado de tal forma que o lado proporcional ao 4 coincide com o diâmetro da circunferência. Qual é a área de interseção das figuras?
 
-A entrada contem uma única linha com os inteiros $N$ e $K$, separados por espaço, que representam, respectivamente, a quantidade de peixes pescados e o fator usado pelo senhor Figueiredo nas histórias.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.3]{\CWD/imagem.png}
+\end{figure}
 
-\section*{Saída}
+Ajude Felipe a resolver a questão.
 
-A saída contem um único inteiro $M$, a quantidade de peixes que o senhor Figueiredo dirá que pescou.
+%
+% For input, use one of the following
+%
+\inputdesc{A entrada contém um único inteiro com o valor do raio $1 \leq R \leq 100$.}
 
-\section*{Restrições}
+%
+% For output, use one of the following
+%
 
-\begin{itemize}
-\item $1 \leq N,K \leq 1000$
-\end{itemize}
+\outputdescline{A saída deve ser a área de interseção das figuras. A saída será considerada correta se a diferença absoluta em relação à solução do juiz for no máximo $10^{-2}$.}
 
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
 
-\section*{Exemplos}
-
-\exemplo
-
-% Vai ter um triângulo retângulo 3, 4, 5, colocado dentro de uma circunferência tal que o lado de comprimento 4 coincide com o diâmetro. Calcula a área da interseção das do triângulo de do círculo. A entrada é o raio do círculo.
-
-% Tanto faz o tamanho, pode colocar 1 <= R <= 1e5, não sei
+\sampleio
