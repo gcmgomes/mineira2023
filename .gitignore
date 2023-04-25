@@ -6,3 +6,9 @@ lib/*
 problems/.box/main.py
 problems/baloes/*
 problems/trebado/build
+*.exe
+*.pyc
+*__pycache__
+__pycache__/
+problems/.build/output.aux
+problems/.build/output.out

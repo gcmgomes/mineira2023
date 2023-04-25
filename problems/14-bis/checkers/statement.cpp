@@ -10,6 +10,7 @@ int main(int argc, char* argv[]) {
   inf.readSpace();
   int m = inf.readInt(1, 200000);
   inf.readEoln();
+  ensure(n*m <= 2e5);
   
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
