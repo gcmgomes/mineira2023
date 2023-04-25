@@ -23,7 +23,7 @@ int DFS(const vector<Node>& graph) {
       continue;
     }
     stack<int> s;
-    s.push(i);
+    s.push(0);
     while (s.size()) {
       int v = s.top();
       color[v] = (prev[v] == -1) ? 0 : 1 - color[prev[v]];

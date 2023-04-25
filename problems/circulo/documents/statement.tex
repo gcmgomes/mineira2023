@@ -1,30 +1,37 @@
-Áurea é uma poderosa feiticeira e em seu mais novo livro, \textit{O Guia de Feitiçaria das Galaxias}, ela detalha magias 
-incríveis e revolucionárias. Por exemplo, ela finalmente mostrou como transformar pedra em ouro branco e como fazer com que um animal feroz
-seja gentil como uma capivara. A mágica de Áurea funciona assim: cristais coloridos são colocados ao longo de um círculo em uma ordem
-específica e todos os cristais da mesma cor devem ser conectados por arcos mágicos que passam por dentro ou fora do círculo.
-Além disso, arcos não podem se cruzar, pois os efeitos podem ser catastróficos e levar a uma ruptura total do espaço-tempo.
-Infelizmente, o editor do \textit{Guia} fez um péssimo trabalho e apagou todos os arcos de todas figuras, sobrando assim apenas
-a ordem dos cristais. Como um bom livro texto, haviam exemplos de feitiços possíveis e impossíveis, mas agora é impossível saber qual
-é qual sem sua ajuda. Escreva um programa que, dada a sequência de cristais, diz se o feitiço era valido ou não.
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
 
-\section*{Entrada}
+A Avenida do Contorno é uma avenida circular de belo horizonte. Durante sua construção, Foram instaladas vários estabelecimentos ao longo dela, como várias drogarias (Araújo), várias pastelarias (Rei do Pastel), etc. Por motivos logísticos, todo par de estabelecimentos do mesmo tipo deve ser conectado \textbf{diretamente} por uma rua (que pode passar por dentro ou por fora da Contorno).
 
-A primeira linha da entrada contém um único inteiro $N$, o número de cristais no feitiço.
-A segunda linha da entrada contém $N$ inteiros, separados por espaço, onde o $i$-ésimo desses inteiros $c_i$ corresponde ao $i$-ésimo cristal
-do feitiço no sentido horário.
+Porém, para que a Contorno continue sendo a avenida principal, não podem existir avenidas em outros lugares da cidade (cruzamento de ruas). Além disso, não irão existir túneis ou viadutos na cidade.
 
-\section*{Saída}
+Dados os tipos de estabelecimentos que existem em ordem ao longo da Contorno, sua tarefa é determinar se é possível construir as ruas conectando todo par de estabelecimentos de mesmo tipo, sem criar esquinas (cruzamentos de ruas) extras.
 
-A única linha da entrada contém um único inteiro $X$, que deve ser $1$ caso o feitiço seja válido ou $0$ caso contrário.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=1.5]{\CWD/image.pdf}
+  \caption{Possível configuração para o primeiro exemplo.}
+\end{figure}
 
-\section*{Restrições}
+%
+% For input, use one of the following
+%
+\inputdesc{A primeira linha contém um inteiro $1 \leq N \leq 10^3$. A segunda linha contém $N$ inteiros $1 \leq c_i \leq N$, em que $c_i$ representa o tipo do $i$-ésimo estabelecimento em ordem na Contorno.}
 
-\begin{itemize}
-    \item $2 \leq N \leq 1000$
-    \item $1 \leq c_i \leq N$.
-\end{itemize}
+%
+% For output, use one of the following
+%
 
+\outputdesc{Imprima {\tt S} caso seja posssível construir as estradas, e {\tt N} caso contrário.}
 
-\section*{Exemplos}
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
 
-\exemplo
+\sampleio
