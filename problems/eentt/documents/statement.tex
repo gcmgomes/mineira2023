@@ -1,0 +1,53 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
+
+Emanuel estava estudando Programação Competitiva, resolvendo problemas sobre palíndromos. Um palíndromo é uma string que permanece igual quando lida de trás para frente, como {\tt arara} e {\tt tenet}. Além disso, Emanuel sabe que uma substring de uma string $T$ é uma string que pode ser obtida apagando-se caracteres do início e fim de $T$. Por exemplo, {\tt ara}, {\tt ar} e {\tt arara} são substrings de {\tt arara}.
+
+Ao se deparar com o problema clássico de computar quantas substring de uma string $S$ são palíndromos, Emanuel se perguntou como que esse problema poderia ser resolvido se pudessemos re-ordenar cada substring. Ou seja, dado uma string $S$, quantas substrings de $S$ (contando repetições) podem ser re-ordenadas para formar um palíndromo.
+
+Cansado após implementar o problema clássico, Emanuel pede sua ajuda para implementar a variação para ele. Para simplificar o problema para você, ele garante que a string nunca conterá vogais ({\tt a}, {\tt e}, {\tt i}, {\tt o}, {\tt u}, {\tt y}).
+
+%
+% For input, use one of the following
+%
+\inputdesc{A primeira linha contém um inteiro $N$.}
+\inputdesc{A segunda linha contém uma string $S$ com $N$ caracteres. $S$ não possui os caracteres {\tt a}, {\tt e}, {\tt i}, {\tt o}, {\tt u}, {\tt y}.}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{Imprima um único inteiro: o número de substrings de $S$ que podem ser re-ordenadas para formar um palíndromo.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio
+
+\bigskip
+\textbf{Explicação do Exemplo 1}: As 12 substring são:
+
+% eennt
+\begin{multicols}{2}
+\begin{enumerate}
+	\item {\tt a}
+	\item {\tt a}
+	\item {\tt b}
+	\item {\tt b}
+	\item {\tt c}
+	\item {\tt aa}
+	\item {\tt bb}
+	\item {\tt aab}
+	\item {\tt abb}
+	\item {\tt bbc}
+	\item {\tt aabb}
+	\item {\tt aabbc}
+\end{enumerate}
+\end{multicols}

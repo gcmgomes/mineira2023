@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Write your test generators here.
+# You should output your test files on the $BUILD directory.
+# You can calso access the attic at the $ATTIC directory.
+
+$ROOT/attic/gen_tests.py

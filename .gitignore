@@ -1,6 +1,8 @@
 # created by virtualenv automatically
+*~
 .vscode/*
 include/*
 lib/*
+problems/.box/main.py
 problems/baloes/*
 problems/trebado/build

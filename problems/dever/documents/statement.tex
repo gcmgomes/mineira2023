@@ -1,0 +1,36 @@
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
+
+Joãozinho acabou de aprender sobre divisão na escola. A professora passou o dever de casa, com $N$ divisões que Joãozinho deve fazer, e entregar o resultado. Para cada uma delas, Joãozinho deve calcular o valor de $a_i / b_i$, sendo $1 \leq a_i, b_i$ inteiros e $1 \leq i \leq N$.
+
+Porém, Joãozinho não é muito inteligente, e ele não entendeu muito bem como fazer quando há dízimas periódicas: ele acha que, se tiver que fazer $1 / 3 = 0.333333\dots$, ele nunca mais vai conseguir terminar o dever! Joãozinho ficou desesperado. Porém, mesmo não sendo muito inteligente, Joãozinho na verdade é sim muito inteligente. Ele achou um furo: notou que a professora não especificou a base numérica em que os alunos devem representar o valor da divisão.
+
+Sendo assim, ajude Joãozinho a descobrir a menor base $B \geq 2$ tal que, se escrevermos $a_i / b_i$ na base $B$, para todo i, não teremos dízimas periódicas. Como a resposta pode ser muito grande, imprima o resto da divisão de $B$ por $10^9+7$.
+
+%
+% For input, use one of the following
+%
+
+\inputdesc{A primeira linha contém um inteiro $1 \leq N \leq 10^5$.}
+\inputdesc{As próximas $N$ linhas contém dois inteiros separados por um espaço $1 \leq a_i, b_i \leq 10^5$.}
+
+%
+% For output, use one of the following
+%
+
+\outputdesc{Uma única linha com o menor valor da base $B \geq 2$ tal que nenhum dos $a_i / b_i$ não forma dízima periódica na base $B$, módulo $10^9+7$.}
+
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio
+
+\bigskip
+\textbf{Explicação do Exemplo 1}: Em base 2, $1/3$ é representado como $0.01010101...$. Mas, em base 3, $1/3$ é representado como $0.1$.
