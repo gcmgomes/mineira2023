@@ -7,11 +7,21 @@
 %   \centering
 %   \includegraphics{\CWD/images/example.pdf}
 % \end{figure}
-“O andar do bêbado” é um problema muito conhecido na matemática. Nesse problema temos um bêbado iniciando na origem $(0, 0)$ do plano 2D e, a cada momento, ele escolhe aleatóriamente uma direção para andar: norte (N), sul (S), leste (L) ou oeste (O). Apesar do andar caótico, é matemáticamente garantido que depois de infinitos movimentos o bêbado sempre volta pra a origem, sua casa alguma vez!
+“O andar do bêbado” é um problema muito conhecido na matemática. Nesse problema temos um bêbado iniciando na origem $(0, 0)$ do plano 2D e, a cada momento, ele escolhe aleatóriamente um direção, norte (N), sul (S), leste (L) ou oeste (O), e anda um metro nesta direção. Apesar do andar caótico, nesta versão original do problema é matemáticamente garantido que depois de infinitos movimentos o bêbado sempre volta para sua casa a origem, alguma vez!
 
-Aqui temos um problema ligeiramente diferente, além de andar nas direções N, S, L e O, em um movimento, o bêbado também pode andar na direção nordeste (NE), sudeste (SE), noroeste (NO) e sudoeste e (SO). 
+Apresentamos aqui um problema ligeiramente diferente, o bêbado pode fazer os movimentos:
+\begin{itemize}
+    \item Norte (N): anda um metro para cima.
+    \item Sul (S): anda um metro para baixo.
+    \item Leste (E): anda um metro para a direita.
+    \item Oeste (S): anda um metro para a esquerda.
+    \item Nordeste (NE): anda um metro para cima e um metro para a direita.
+    \item Sudeste (SE): anda um metro para baixo e um metro para a direita.
+    \item Noroeste (NO): anda um metro para cima e um metro para a esqueda.
+    \item Sudoeste (SO): anda um metro para baixo e um metro para a esquerda.
+\end{itemize}
 
-Dado $K$, o número de passos do bêbado, imprima de quantas formas o bêbado pode fazer $K$ movimentos e terminar em casa módulo $1000000007$ ($10^9 + 7$).
+Dado que o bêbado inicia na origem $(0, 0)$, imprima de quantas formas ele pode fazer \textbf{exatamente} $\boldsymbol K$ \textbf{movimentos} de tal forma que após esses $K$ movimentos ele esteja novamente em sua casa, a origem. Como o resultado pode ser grande, imprima a resposta módulo $1000000007$ ($10^9 + 7$).
 
 \begin{figure}[H]
     \centering
@@ -27,7 +37,7 @@ Dado $K$, o número de passos do bêbado, imprima de quantas formas o bêbado po
 % For output, use one of the following
 %
 
-\outputdescline{A saída deve ser composta por um único número: o número de formas que o bêbado pode voltar para a origem depois de $K$ movimentos módulo $10^9 + 7$.}
+\outputdesc{A saída deve ser composta por um único número: o número de formas que o bêbado pode voltar para a origem depois de $K$ movimentos módulo $10^9 + 7$.}
 
 %\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
 %in the documents directory and include them as samples.
