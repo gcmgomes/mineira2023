@@ -12,3 +12,4 @@ problems/trebado/build
 __pycache__/
 problems/.build/output.aux
 problems/.build/output.out
+problems/.build/output.log
