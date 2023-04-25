@@ -1,10 +1,16 @@
-Adriana e seus amigos estavam brincando e uma senhora os pediu para capinar seu lote. As crianças preferem brincar mas, como são educadas, vão escolher uma das crianças para capinar o lote da senhora. Para escolher quem capinará, jogarão adedanha.
+Enquanto Adriana e seus amigos estavam brincando, senhora os pediu para capinar seu lote. As crianças preferem brincar mas, como são educadas, decidiram escolher uma das crianças para capinar o lote enquanto as outras se divertem. Para escolher quem capinará, jogarão adedanha.
 
-Adedanha funciona da seguinte forma: todas as crianças esticam alguns dedos e o número de dedos esticados (um número de $0$ a $20$, dedos do pé também são dedos!) de cada criança são somados para um valor S. Depois disso conta-se circularmente as $N$ crianças ($0, 1, \ldots, N - 2, N - 1, 0, 1, \ldots$) partindo da criança $0$ (Adriana). Depois de contarmos $S$ vezes, a criança escolhida capinará.
+Adedanha funciona da seguinte forma: todas as crianças esticam alguns dedos e o número de dedos esticados (um número de $0$ a $20$, dedos do pé também são dedos!) de cada criança são somados para um valor $S$. Depois disso conta-se \textbf{circularmente} as $N$ crianças que são numeradas de $0$ (Adriana) a $N - 1$. Logo a contagem se dá na seguinte ordem: $0, 1, \ldots, N - 2, N - 1, 0, 1, \ldots$. Depois de contarmos $S$ crianças, a criança em que a contagem parou será escolhida para a árdua tarefa de capinar o lote.
 
-Adriana é muito esperta e, para escolher quem capina, ela decidiu trapacear: ela só vai decidir o número de dedos que vai esticar logo depois de ver o número que cada uma das outras crianças esticou (Adriana consegue contar dedos muito rápido, as outras crianças nem percebem sua trapaça!).
+Adriana é muito esperta e decidiu trapacear: ela só vai decidir o número de dedos que vai esticar logo depois de ver o número que cada uma das outras crianças esticou (Adriana consegue contar dedos muito rápido, as outras crianças nem percebem sua trapaça!).
 
-Dada a sua informação privilegiada Adriana quer saber, para cada criança, se ela consegue escolher algum número de dedos para esticar de forma que esta criança capine (se vários números de dedos esticados forem possíveis para fazer certa criança começar, imprima o menor deles) ou caso seja impossível, -1.
+Dada a sua informação privilegiada Adriana quer saber, para cada criança (incluindo ela própria), se ela consegue escolher algum número de dedos para esticar de forma que esta criança capine (se vários números de dedos esticados forem possíveis para fazer certa criança capinar, imprima o menor deles) ou caso seja impossível, -1.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=7cm]{\CWD/adedanha.png}
+    \caption{Como no Exemplo 1, se $N = 4$ e os amigos de Adriana esticarem $1$, $3$ e $2$ dedos, Adriana pode esticar um dedo e assim o fim da contagem caia na criança $3$ (D na figura).}
+\end{figure}
 
 \inputdesc{
 A entrada contém duas linhas, a primeira contém um inteiro $N$, o número de crianças participando da adedanha (incluindo Adriana).
