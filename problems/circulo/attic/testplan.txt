@@ -54,3 +54,6 @@
 
 # Slow instances.
 5     ; copy attic/slow-1.in
+
+# Largest instance.
+5     ; copy attic/largest.in
