@@ -29,34 +29,42 @@ vector<vector<int>> trans(vector<vector<int>> v) {
 	return ret;
 }
 
+const int MAX = 1e5+10;
+
+int cnt[MAX];
+
 vector<vector<int>> get_grundy(vector<vector<int>> v) {
 	int n = v.size(), m = v[0].size();
-	vector<set<int>> baixo(m);
-	set<int> all;
-	for (int i = 0; i <= n+m; i++) all.insert(i);
-	vector<int> tirei;
 
 	for (int i = n-1; i >= 0; i--) {
 		for (int j = m-1; j >= 0; j--) {
 			if (v[i][j] == -1) {
-				baixo[j].clear();
-				for (int k : tirei) all.insert(k);
-				tirei.clear();
+				for (int jj = j+1; jj < m; jj++) {
+					if (v[i][jj] == -1) break;
+					cnt[v[i][jj]]--;
+				}
 				continue;
 			}
-			auto it = all.begin();
-			for (int k : baixo[j]) {
-				if (*it == k) it++;
-				else if (*it < k) break;
+
+			for (int ii = i+1; ii < n; ii++) {
+				if (v[ii][j] == -1) break;
+				cnt[v[ii][j]]++;
 			}
-			int mex = *it;
+
+			int mex = 0;
+			while (cnt[mex]) mex++;
 			v[i][j] = mex;
-			all.erase(mex);
-			tirei.push_back(mex);
-			baixo[j].insert(mex);
+			cnt[v[i][j]]++;
+
+			for (int ii = i+1; ii < n; ii++) {
+				if (v[ii][j] == -1) break;
+				cnt[v[ii][j]]--;
+			}
 		}
-		for (int k : tirei) all.insert(k);
-		tirei.clear();
+		for (int j = 0; j < m; j++) {
+			if (v[i][j] == -1) break;
+			cnt[v[i][j]]--;
+		}
 	}
 	return v;
 }

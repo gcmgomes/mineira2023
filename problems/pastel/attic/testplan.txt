@@ -23,6 +23,7 @@
 3     ; fixed.exe 1 100000 v1
 3     ; fixed.exe 10 10000 v1
 3     ; fixed.exe 100 1000 v1
+3     ; fixed.exe 316 316 v1
 3     ; fixed.exe 1000 100 v1
 3     ; fixed.exe 10000 10 v1
 3     ; fixed.exe 100000 1 v1
@@ -30,6 +31,27 @@
 4     ; fixed_free.exe 1 100000 v1
 4     ; fixed_free.exe 10 10000 v1
 4     ; fixed_free.exe 100 1000 v1
+4     ; fixed_free.exe 316 316 v1
 4     ; fixed_free.exe 1000 100 v1
 4     ; fixed_free.exe 10000 10 v1
 4     ; fixed_free.exe 100000 1 v1
+
+5     ; fixed_almost_all.exe 1 100000 v1
+5     ; fixed_almost_all.exe 10 10000 v1
+5     ; fixed_almost_all.exe 100 1000 v1
+5     ; fixed_almost_all.exe 316 316 v1
+5     ; fixed_almost_all.exe 316 316 v2
+5     ; fixed_almost_all.exe 316 316 v3
+5     ; fixed_almost_all.exe 316 316 v4
+5     ; fixed_almost_all.exe 316 316 v5
+5     ; fixed_almost_all.exe 1000 100 v1
+5     ; fixed_almost_all.exe 10000 10 v1
+5     ; fixed_almost_all.exe 100000 1 v1
+
+6     ; fixed_all.exe 1 100000 v1
+6     ; fixed_all.exe 10 10000 v1
+6     ; fixed_all.exe 100 1000 v1
+6     ; fixed_all.exe 316 316 v1
+6     ; fixed_all.exe 1000 100 v1
+6     ; fixed_all.exe 10000 10 v1
+6     ; fixed_all.exe 100000 1 v1

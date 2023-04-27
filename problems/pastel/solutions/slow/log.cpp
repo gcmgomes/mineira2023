@@ -45,10 +45,7 @@ vector<vector<int>> get_grundy(vector<vector<int>> v) {
 				continue;
 			}
 			auto it = all.begin();
-			for (int k : baixo[j]) {
-				if (*it == k) it++;
-				else if (*it < k) break;
-			}
+			while (baixo[j].find(*it) != baixo[j].end()) it++;
 			int mex = *it;
 			v[i][j] = mex;
 			all.erase(mex);
