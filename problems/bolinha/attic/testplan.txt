@@ -1,0 +1,17 @@
+# this file contains the test plan
+# format: test group ; command to be executed
+# script build-tests calls gen_tests.py, which copies samples and
+# executes the command gen_tests.py
+
+# use generators
+2     ; py_generator.exe 1 1
+2     ; py_generator.exe 2 10
+2     ; py_generator.exe 3 100
+2     ; py_generator.exe 4 1000
+2     ; py_generator.exe 5 10000
+2     ; py_generator.exe 6 100000
+2     ; py_generator.exe 7 200000
+2     ; py_generator.exe 8 200000
+2     ; py_generator.exe 9 200000
+2     ; py_generator.exe 10 200000
+2     ; py_generator.exe 11 200000

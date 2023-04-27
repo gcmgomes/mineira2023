@@ -11,6 +11,10 @@
 2     ; copy attic/manual-3.in
 
 # Use generators
+3     ; gen_random.exe 2
+3     ; gen_random.exe 5
+3     ; gen_random.exe 5
+3     ; gen_random.exe 10
 3     ; gen_random.exe 19
 3     ; gen_random.exe 19
 3     ; gen_random.exe 16
