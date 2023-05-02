@@ -30,7 +30,10 @@ int main() { _
 	for (int i = max(0, x - 1); i <= x; i++) {
 		auto [deu, ans] = solve(s, i);
 		if (deu) {
-			for (int j : ans) cout << j+1 << " ";
+			for (int j = 0; j < n; j++) {
+				if (j) cout << " ";
+				cout << ans[j]+1;
+			}
 			cout << endl;
 			return 0;
 		}
