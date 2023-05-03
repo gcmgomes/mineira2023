@@ -64,7 +64,7 @@ bool valid(vector<int>& p) {
 ll compute_ans(vector<pair<int, int>>& v, vector<int>& p) {
 	ll ans = 0;
 	for (int i = 1; i < p.size(); i++) {
-		if (p[i] > p[i-1]) ans += v[p[i-1]].first;
+		if (p[i] < p[i-1]) ans += v[p[i-1]].first;
 		else ans += v[p[i-1]].second;
 	}
 	ans += min(v[p.back()].first, v[p.back()].second);

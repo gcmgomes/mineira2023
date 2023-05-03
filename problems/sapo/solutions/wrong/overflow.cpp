@@ -12,7 +12,7 @@ typedef long long ll;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
-pair<ll, vector<int>> solve(vector<pair<int, int>>& v, int at) {
+pair<int, vector<int>> solve(vector<pair<int, int>>& v, int at) {
 	vector<int> ret;
 	ll val = 0;
 	int l = at, r = at;
@@ -50,7 +50,7 @@ int main() { _
 	int x = 0;
 	for (int i = 0; i < n; i++) if (v[i].first < v[i].second) x++;
 	vector<int> ans;
-	int val = INF;
+	ll val = LINF;
 	for (int i = max(0, x - 1); i <= min(n-1, x); i++) {
 		auto [val2, ans2] = solve(v, i);
 		if (val2 < val) val = val2, ans = ans2;
