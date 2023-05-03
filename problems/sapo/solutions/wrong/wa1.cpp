@@ -47,6 +47,7 @@ int main() { _
 	int n; cin >> n;
 	vector<pair<int, int>> v(n);
 	for (auto& [a, b] : v) cin >> a >> b;
+	if (n == 1) return cout << -1 << endl, 0;
 	int x = 0;
 	for (int i = 0; i < n; i++) if (v[i].first < v[i].second) x++;
 	vector<int> ans;

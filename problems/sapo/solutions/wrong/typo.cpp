@@ -48,7 +48,7 @@ int main() { _
 	vector<pair<int, int>> v(n);
 	for (auto& [a, b] : v) cin >> a >> b;
 	int x = 0;
-	for (int i = 0; i < n; i++) if (v[i].first < v[i].second) x++;
+	for (int i = 0; i < n; i++) if (v[i].first <= v[i].second) x++;
 	vector<int> ans;
 	ll val = LINF;
 	for (int i = max(0, x - 1); i <= min(n-1, x); i++) {

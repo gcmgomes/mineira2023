@@ -8,33 +8,28 @@
 %   \includegraphics{\CWD/images/example.pdf}
 % \end{figure}
 
-Put your statement here, using the macros below.
+Um sapo está no pântano, na frente de um rio. No rio há $N$ vitórias-régia, organizadas em uma sequência, da esquerda para a direita. O sapo sabe que, ao pular da vitória-régia $A$ para a vitória-régia $B$, a $A$ afunda para sempre no rio. Além disso, a $i$-ésima vitória-régia é tal que o sapo gasta $x_i$ de energia para pular dela para a esquerda (\textbf{independente do tamanho do pulo}), e similarmente $y_i$ para a direita.
+
+O sapo, então, por diversão, irá escolher uma das vitórias-régia, pular nela, e depois pular para \textbf{todas as outras antes de sair do rio}, decidindo em cada momento pular para a esquerda ou direita. Como ele tem medo de cair no rio, em cada pulo, ele \textbf{sempre pula para a vitória-régia mais próxima na direção escolhida que ainda não afundou}. O sapo quer afundar todas as vitórias-régia dessa maneira, e, depois, pular para fora do rio. Se o caminho do sapo termina na posição $i$, o custo de pular dessa última vitória-régia para fora do rio é $\min(x_i, y_i)$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.2]{\CWD/img/image.png}
+  \caption{Representação do exemplo. A energia gasta é $2+3+5+3+1=14$.}
+\end{figure}
+
+Ajude o sapo a descobrir alguma sequência de vitórias-régia que minimiza a energia total gasta por ele.
 
 %
 % For input, use one of the following
 %
-\inputdesc{The first line contains five integers $A_1$, $B_1$, $C_1$,
-  $D_1$ and $E_1$ ($0 \leq A_1,B_1,C_1,D_1,E_1 \leq 1$), representing
-  the connection points labeled \emph{a},\emph{b}, \emph{c}, \emph{d}
-  and \emph{e} of the first connector in the pair. The second line
-  contains five integers $A_2$, $B_2$, $C_2$, $D_2$ and $E_2$ ($0 \leq
-  A_2,B_2,C_2,D_2,E_2 \leq 1$), representing the connection points
-  labeled \emph{a},\emph{b}, \emph{c}, \emph{d} and \emph{e} of the
-  second connector in the pair. In the input, a $0$ represents an outlet an
-  a $1$ represents a plug.}
-
-\inputdescline{an integer $N$ ($1 \le N \le 10^{100}$).}
+\inputdesc{A primeira linha da entrada contém um inteiro $1 \leq N \leq 10^5$, a quantidade de vitórias-régia no lago. As próximas $N$ linhas possuem dois inteiros $1 \leq x_i, y_i \leq 10^9$, o quanto de energia que o sapo gasta para pular da $i$-ésima vitória-régia para a esquerda ou direita, respectivamente, independente do tamanho do pulo.}
 
 %
 % For output, use one of the following
 %
 
-\outputdesc{Output a line containing the uppercase letter \literalchar{Y}
-if it is possible to satisfy the bear; otherwise
-output the uppercase letter \literalchar{N}.}
-
-\outputdescline{an integer indicating the number of eleven-multiple-anagrams of $N$.
-Because this number can be very large, output the remainder of dividing it by $10^9 + 7$.}
+\outputdesc{Imprima uma sequência de índices que descreve uma sequência de pulos que minimiza a energia total gasta pelo sapo. Se houver várias soluções, imprima qualquer uma delas.}
 
 %\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
 %in the documents directory and include them as samples.

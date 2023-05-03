@@ -50,7 +50,7 @@ int main() { _
 	int x = 0;
 	for (int i = 0; i < n; i++) if (v[i].first < v[i].second) x++;
 	vector<int> ans;
-	ll val = LINF;
+	int val = INF;
 	for (int i = max(0, x - 1); i <= min(n-1, x); i++) {
 		auto [val2, ans2] = solve(v, i);
 		if (val2 < val) val = val2, ans = ans2;

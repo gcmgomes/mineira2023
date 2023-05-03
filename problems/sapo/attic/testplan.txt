@@ -10,6 +10,16 @@
 # note that the sample c++ generator only takes two arguments
 # here we add dummy v1/v2 argument just to have different outputs for the same bounds
 # (as generators random engines use program args as seed)
+1     ; random.exe 10 10 v1
+1     ; random.exe 10 10 v2
+1     ; random.exe 10 10 v3
+1     ; random.exe 10 10 v4
+1     ; random.exe 10 10 v5
+1     ; random.exe 10 10 v6
+1     ; random.exe 10 10 v7
+1     ; random.exe 10 10 v8
+1     ; random.exe 10 10 v9
+1     ; random.exe 10 10 v10
 1     ; random.exe 10 100 v1
 1     ; random.exe 10 100 v2
 1     ; random.exe 10 100 v3

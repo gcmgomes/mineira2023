@@ -53,7 +53,7 @@ int main() { _
 	ll val = LINF;
 	for (int i = max(0, x - 1); i <= min(n-1, x); i++) {
 		auto [val2, ans2] = solve(v, i);
-		if (val2 < val) val = val2, ans = ans2;
+		val = val2, ans = ans2;
 	}
 	for (int i = 0; i < n; i++) {
 		if (i) cout << " ";

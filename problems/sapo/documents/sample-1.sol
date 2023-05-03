@@ -1,1 +1,1 @@
-Put the sample output here
+2 3 1 4 5
