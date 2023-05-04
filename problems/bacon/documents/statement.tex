@@ -1,24 +1,38 @@
-Senhor Figueiredo é um pescador famoso nos botecos da cidade de Lavras por causa das histórias duvidosas que ele conta sobre as aventuras dele no Rio Grande.
-Certa vez o jovem Ceconelli, vizinho do senhor Figueiredo, resolveu investigar a veracidade dos causos.
-Depois de muita insistência de Ceconelli, o senhor Figueiredo finalmente deixou que o jovem o acompanhasse, desde que carregasse os mantimentos e sua vara de pesca.
-Durante a pesca, Ceconelli acabou descobrindo o segredo do senhor Figueiredo sobre as histórias do pescador; o senhor Figueiredo multiplica a quantia fisgada por um fator fixo!
-Dados o fator multiplicativo usado pelo senhor Figueiredo e a quantidade real de peixes pescados, qual será a quantidade de peixes que o velho pescador irá contar para seus amigos no bar?
+% To add an image or include a .tex file you need to add
+% \CWD
+% to the relative (to the main document) path.
+%
+% Example:
+% \begin{figure}
+%   \centering
+%   \includegraphics{\CWD/images/example.pdf}
+% \end{figure}
 
-\section*{Entrada}
+GG estava pensando em um problema para a Maratona Mineira de Programação. Ele pensou no seguinte problema: é dado uma árvore (grafo não direcionado conexo acícilo) enraizada no vértice $1$, e cada vértice pode estar ligado ou desligado. Inicialmente, todos estão desligados. Existem 3 tipos de operações:
 
-A entrada contem uma única linha com os inteiros $N$ e $K$, separados por espaço, que representam, respectivamente, a quantidade de peixes pescados e o fator usado pelo senhor Figueiredo nas histórias.
+\begin{enumerate}
+	\item Pintar uma sub-ávore.
+	\item Despintar uma sub-árvore.
+	\item Quantos vértices pintados existem em uma dada sub-árvore?
+\end{enumerate}
 
-\section*{Saída}
+Além disso, após as operações 1 e 2, devem ser respectivamente pintados ou despintados a quantidade mínima de vértices para que a seguinte propriedade seja satisfeita: \textbf{todo vérice não folha está pintado se, e somente se, todos os seus filhos estão pintados}.
 
-A saída contem um único inteiro $M$, a quantidade de peixes que o senhor Figueiredo dirá que pescou.
+Você, como \textit{setter} da Maratona Mineira, ficou intrigado ao ouvir sobre o problema. Porém, GG ainda não sabe como resolvê-lo eficientemente. Ajude GG e bole uma solução para o problema.
 
-\section*{Restrições}
+%
+% For input, use one of the following
+%
 
-\begin{itemize}
-\item $1 \leq N,K \leq 1000$
-\end{itemize}
+\inputdesc{A primeira linha contém um inteiro $1 \leq N \leq 5 \times 10^5$. As próximas $N-1$ linhas contém as arestas $1 \leq a_i, b_i \leq N$ da árvore. É garantido que o grafo é uma árvore, e a raiz é o vértice $1$. A próxima linha contém o número de operações $1 \leq Q \leq 5 \times 10^5$. As próximas $Q$ linhas contém 2 inteiros cada, $t, v_i$, em que $t \in \{1, 2, 3\}$ define a operação e $1 \leq v_i \leq N$ o vértice que define a sub-árvore em questão.}
 
+%
+% For output, use one of the following
+%
 
-\section*{Exemplos}
+\outputdesc{Para cada operação do tipo 3, imprima o número de vértices pintados na sub-árvore definida pelo vértice da consulta.}
 
-\exemplo
+%\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
+%in the documents directory and include them as samples.
+
+\sampleio
