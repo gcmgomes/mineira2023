@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # encoding: utf-8
 
 import os
@@ -8,7 +8,7 @@ import sys
 
 from glob import glob
 from tempfile import NamedTemporaryFile
-from StringIO import StringIO
+from io import StringIO
 
 
 ROOT= os.environ['ROOT']
@@ -19,14 +19,14 @@ PLAN='testplan.txt'
 
 def usage():
     basename = os.path.basename(sys.argv[0])
-    print >> sys.stderr, 'Usage:'
-    print >> sys.stderr,'\t%s \n' % basename
+    print('Usage:', file=sys.stderr)
+    print('\t%s \n' % basename, file=sys.stderr)
     sys.exit(1)
 
 def _main():
-    plan_fn=os.path.join(ATTICDIR,PLAN)
+    plan_fn=os.path.join(ATTICDIR, PLAN)
     if not os.path.exists(plan_fn):
-        print >> sys.stderr, "Could not find %s file" % plan_fn
+        print("Could not find %s file" % plan_fn, file=sys.stderr)
         usage()
     tmp=open(plan_fn, 'r')
     lines=tmp.readlines()
@@ -35,7 +35,7 @@ def _main():
     for l in lines:
         l=l.strip()
         if l=='' or l[0]=='#': continue
-        (test,command)=l.split(';')
+        (test, command)=l.split(';')
         test=test.strip()
         command=command.strip()
         tks=command.split()
@@ -43,7 +43,7 @@ def _main():
         if test!=last_test: # start new test group
             last_test=test
             case_num=0
-            tdir=os.path.join(TESTDIR,'%d' % test)
+            tdir=os.path.join(TESTDIR, '%d' % test)
             if not os.path.exists(tdir):
                 os.mkdir(tdir)
                 
@@ -56,7 +56,6 @@ def _main():
             continue
         cmd=[]
         cmd.append(os.path.join(ATTICDIR, tks[0])) # fix path to executable
-        cmd.append('%s-%d' % (tdir,case_num))
         for t in tks[1:]:
             cmd.append(t)
 
@@ -65,7 +64,7 @@ def _main():
                                    stdout = output_file,
                                    stderr = None)
             if result!=0:
-                print >> sys.stderr, command, "execution failed!"
+                print(command, "execution failed!", file=sys.stderr)
                 sys.exit(1)
 
 if __name__ == '__main__':

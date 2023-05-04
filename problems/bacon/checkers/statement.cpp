@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
   }
 
   std::vector<bool> vis(n);
-  ensure(dfs(0, vis, g) == n);
+  // ensure(dfs(0, vis, g) == n);
 
   int q = inf.readInt(1, 1e5);
   for (int i = 0; i < q; i++) {

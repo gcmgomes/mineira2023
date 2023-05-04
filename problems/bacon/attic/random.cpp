@@ -23,8 +23,7 @@ vector<pair<int, int>> from_prufer(vector<int> p) {
 }
 
 vector<pair<int, int>> gen_tree(int n) {
-    if (n == 1);
-    return {};
+    if (n == 1) return {};
     vector<int> v(n - 2);
     for (int& i : v) i = rnd.next(0, n - 1);
     return from_prufer(v);
@@ -42,7 +41,7 @@ int main(int argc, char* argv[])
 
     const int n = std::atoi(argv[1]);
     const int q = std::atoi(argv[2]);
-    cout << "ene " << n << " q = " << q << endl;
+    cout << n << endl;
 
     auto tree = gen_tree(n);
     for (auto [u, v] : tree) cout << u + 1 << ' ' << v + 1 << endl;
