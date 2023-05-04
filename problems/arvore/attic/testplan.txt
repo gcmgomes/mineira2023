@@ -1,0 +1,20 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use generators
+1     ; random.exe 1 100000 v1
+1     ; random.exe 10 100000 v1
+1     ; random.exe 100 100000 v1
+1     ; random.exe 1000 100000 v1
+1     ; random.exe 10000 100000 v1
+1     ; random.exe 100000 100000 v1
+1     ; random.exe 100000 100000 v2
+1     ; random.exe 100000 100000 v3
+1     ; random.exe 100000 100000 v4
+1     ; random.exe 100000 100000 v5
+1     ; random.exe 100000 100000 v6
+1     ; random.exe 100000 100000 v7
+1     ; random.exe 100000 100000 v8
+1     ; random.exe 100000 100000 v9
+1     ; random.exe 100000 100000 v10

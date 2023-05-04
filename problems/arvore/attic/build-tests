@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# formerly !/bin/sh
+
+# box runs this script for building the input
+
+# Write your test generators here.
+# You should output your test files on the $BUILD directory.
+# You can calso access the attic at the $ATTIC directory.
+
+Caso=0
+mkdir $ROOT/build/tests/0 # samples from the statement
+for F in $ROOT/documents/sample-*.in ; do
+  cp $F $ROOT/build/tests/0/$((++Caso)).in
+done
+
+$ROOT/attic/gen_tests.py
