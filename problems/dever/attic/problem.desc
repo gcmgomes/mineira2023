@@ -1,6 +1,6 @@
-time_limit_c=0.40
-time_limit_java=0.30
-time_limit_python=0.40
-C=([0.001073],[0.129077],[0.35987])
+time_limit_c=0.70
+time_limit_java=0.70
+time_limit_python=0.70
+C=([0.000968, 0.0010479999999999999],[0.428905, 0.128164],[0.935645, 0.38225099999999995])
 Java=([],[],[])
 Python=([],[],[])
