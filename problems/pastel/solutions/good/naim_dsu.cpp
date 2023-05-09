@@ -130,8 +130,14 @@ vector<ll> mov(vector<vector<int>> v) {
     int mx=0;
     rep(i,0,n)rep(j,0,m)mx=max(mx,v[i][j]);
 	vector<ll> ret(N);
-	for (int i = 0; i < n; i++) if (v[i][0] >= 0) ret[v[i][0]]++;
-	for (int j = 1; j < m; j++) if (v[0][j] >= 0) ret[v[0][j]]++;
+	for (int i = 0; i < n; i++) {
+		if (v[i][0] >= 0) ret[v[i][0]]++;
+		else break;
+	}
+	for (int j = 1; j < m; j++) {
+		if (v[0][j] >= 0) ret[v[0][j]]++;
+		else break;
+	}
     return ret;
 }
 
