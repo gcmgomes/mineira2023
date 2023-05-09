@@ -10,7 +10,7 @@ typedef long long ll;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
-const int MOD = 1e9 + 7, MAX = 5e3 + 10;
+const int MOD = 1e9 + 7, MAX = 2*5e3 + 10;
 
 ll fat[MAX], ifat[MAX];
 
