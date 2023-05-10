@@ -8,29 +8,42 @@
 %   \includegraphics{\CWD/images/example.pdf}
 % \end{figure}
 
-GG estava pensando em um problema para a Maratona Mineira de Programação. Ele pensou no seguinte problema: é dado uma árvore (grafo não direcionado conexo acícilo) enraizada no vértice $1$, e cada vértice pode estar ligado ou desligado. Inicialmente, todos estão desligados. Existem 3 tipos de operações:
+Bacon - o Próspero - é reverenciado no reino ds capivaras por seu glorioso reinado de paz e progresso, fruto de sua inabalável devoção ao Deboismo,
+religião que hoje é seguida por mais de 90\% dos habitantes da Bacônia. O Deboismo prega que todos seus seguidores devem ficar o maáximo possível
+de boa na lagoa, evitando assim os estresses e aflições que diminuem a qualidade de vida e geram o caos social. Além disso, ele patrocina várias festas
+populares e, sem sombra de dúvidas, as Festas da Cheia (para celebrar as chuvas de fim de ano) e suas árvore mágicas são as mais incríveis de todas.
+As árvores mágicas possuem luz própria, podem ser representadas como árvores enraizadas, e funcionam da seguinte forma:
 
-\begin{enumerate}
-	\item Pintar uma sub-ávore.
-	\item Despintar uma sub-árvore.
-	\item Quantos vértices pintados existem em uma dada sub-árvore?
-\end{enumerate}
+\begin{itemize}
+	\item Uma sub-árvore inteira pode se acender.
+	\item Uma sub-árvore inteira pode se apagar.
+	\item Cada folha pode acendar ou apagar.
+	\item Um nó interno da árvore está aceso se e somente se todos os seus filhos estão acesos.
+\end{itemize}
 
-Além disso, após as operações 1 e 2, devem ser respectivamente pintados ou despintados a quantidade mínima de vértices para que a seguinte propriedade seja satisfeita: \textbf{todo vérice não folha está pintado se, e somente se, todos os seus filhos estão pintados}.
-
-Você, como \textit{setter} da Maratona Mineira, ficou intrigado ao ouvir sobre o problema. Porém, GG ainda não sabe como resolvê-lo eficientemente. Ajude GG e bole uma solução para o problema.
+Na 13ª Festa da Cheia de seu reinado, Bacon - o Próspero - levou seu bisneto, que viria a ser o rei Bacon - o Grafo - para ver a árvore mágica plantada
+no palácio. Como todo bom amante da combinátoria, a pequena capivara perguntava incessantemente ao bisavô quantos nós de uma dada sub-árvore estavam acesos.
+Infelizmente,  nosso herói não é lá muito bom nessa área, e pediu a você, Grande Maratonista, para o ajudar a responder as perguntas do futuro monarca!
 
 %
 % For input, use one of the following
 %
 
-\inputdesc{A primeira linha contém um inteiro $1 \leq N \leq 10^5$. As próximas $N-1$ linhas contém as arestas $1 \leq a_i, b_i \leq N$ da árvore. É garantido que o grafo é uma árvore, e a raiz é o vértice $1$. A próxima linha contém o número de operações $1 \leq Q \leq 10^5$. As próximas $Q$ linhas contém 2 inteiros cada, $t, v_i$, em que $t \in \{1, 2, 3\}$ define a operação e $1 \leq v_i \leq N$ o vértice que define a sub-árvore em questão.}
+\inputdesc{
+	A primeira linha contém um inteiro $1 \leq N \leq 10^5$, o número de nós da árvore.
+	As próximas $N-1$ linhas contém as arestas $1 \leq a_i, b_i \leq N$ da árvore. É garantido que as arestas descrevem uma árvore, que a raiz é
+	sempre o vértice de número $1$, e que $a_i$ é o pai de $b_i$.
+	A próxima linha contém o um inteiro $1 \leq Q \leq 10^5$ que representa o número de eventos presenciados por Bacon - o Próspero.
+	As próximas $Q$ linhas contém 2 inteiros cada, $t_i, v_i$, em que $t_i \in \{1, 2, 3\}$ define o $i$-ésimo evento e $1 \leq v_i \leq N$ o vértice que enraiza a sub-árvore em questão.
+	Se $t_i = 1$, então a sub-árvore enraizada em $v_i$ se acende. Se $t_i = 2$, a sub-árvore enraizada em $v_i$ se apaga.
+	Se $t_i = 3$, o pequeno Bacon perguntou a seu bisavô quantos nós na sub-árvore enraizada em $v_i$ (inclusive $v_i$) estavam acesos.
+}
 
 %
 % For output, use one of the following
 %
 
-\outputdesc{Para cada operação do tipo 3, imprima o número de vértices pintados na sub-árvore definida pelo vértice da consulta.}
+\outputdesc{Para cada operação do tipo $3$, imprima o número de vértices acesos na sub-árvore definida pelo vértice dado.}
 
 %\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
 %in the documents directory and include them as samples.
