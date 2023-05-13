@@ -73,7 +73,7 @@ vector<int> mov(vector<vector<int>> v) {
 	}
 	for (int j = 1; j < m; j++) {
 		if (v[0][j] >= 0) ret[v[0][j]]++;
-		else break:
+		else break;
 	}
 	return ret;
 }
