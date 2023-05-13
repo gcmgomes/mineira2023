@@ -86,7 +86,7 @@ int main() { _
 		});
 		at = max(at, solve(w, c));
 		for (int i = 0; i < IT; i++) {
-			random_whuffle(w.begin(), w.end());
+			random_shuffle(w.begin(), w.end());
 			ans = max(ans, greedy(w, c));
 		}
 		ans += at;
