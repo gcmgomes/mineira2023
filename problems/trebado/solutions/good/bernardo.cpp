@@ -10,7 +10,9 @@ typedef long long ll;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
-const int MOD = 1e9 + 7, MAX = 2*5e3 + 10;
+const int MAX = 2*5e3 + 10;
+
+int MOD;
 
 ll fat[MAX], ifat[MAX];
 
@@ -30,9 +32,9 @@ ll choose(int n, int m) {
 }
 
 int main() { _
-	build();
 
-	int k; cin >> k;
+	int k; cin >> k >> MOD;
+	build();
 
 	ll ans = 0;
 	for (int n = 0; n <= k; n++) {

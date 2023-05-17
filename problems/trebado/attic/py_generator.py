@@ -10,4 +10,6 @@ from random import seed, randint
 # based on the input arguments
 seed('|'.join(sys.argv[1:]))
 
-print(randint(1, 5000))
+primes = [100001303, 100001537, 100000627, 100000609, 999999733, 100000049, 100000717, 999997577, 100003301, 100002499]
+
+print(randint(1, 5000),primes[randint(0,9)])
