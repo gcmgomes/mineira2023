@@ -55,3 +55,5 @@
 6     ; fixed_all.exe 1000 100 v1
 6     ; fixed_all.exe 10000 10 v1
 6     ; fixed_all.exe 100000 1 v1
+
+7     ; copy attic/caso1.txt
