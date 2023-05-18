@@ -12,8 +12,7 @@ const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 const int MAX = 500;
-const int MOD = 1e9 + 7;
-
+int MOD;
 int dx[8] = {-1, -1, -1, 0, 0, 1, 1, 1};
 int dy[8] = {-1,  0,  1,-1, 1,-1, 0, 1};
 
@@ -33,7 +32,7 @@ int dp(int left, int x, int y) {
 
 int main() { _
 	memset(memo, -1, sizeof memo);
-	int k; cin >> k;
+	int k; cin >> k >> MOD;
 
 	cout << dp(k, 0, 0) << endl;
 
