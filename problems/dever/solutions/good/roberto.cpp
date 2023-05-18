@@ -25,7 +25,7 @@ typedef pair<int, int> ii;
 typedef long double LD;
 typedef vector<int> vi;
 
-const int MOD = 1e9+7;
+const int MOD = 998244353;
 
 int32_t main(){
     iopt;

@@ -17,11 +17,12 @@ int main(int argc, char* argv[])
     const int MIN = std::atoi(argv[1]);
     const int MAX = std::atoi(argv[2]);
 
-	cout << 4 << std::endl;
-    cout << "1 5" << std::endl;
-    cout << "1 13" << std::endl;
-    cout << "1 1783" << std::endl;
-    cout << "1 17257" << std::endl;
+	cout << 5 << std::endl;
+    cout << "1 2" << std::endl;
+    cout << "1 23" << std::endl;
+    cout << "1 83" << std::endl;
+    cout << "1 677" << std::endl;
+    cout << "1 1931" << std::endl;
 
     return 0;
 }

@@ -13,7 +13,7 @@ const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 const int MAX = 1e5+10;
-const int MOD = 1e9+7;
+const int MOD = 998244353;
 
 vector<int> fact(int n) {
 	vector<int> ret;
