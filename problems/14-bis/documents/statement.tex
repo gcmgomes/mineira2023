@@ -27,9 +27,9 @@ Dado um mapa topográfico da área, descrito como uma matriz $N\times M$ (em que
 \inputdesc{
   A primeira linha conterá dois números $N$ e $M$ que representam o número de linhas e colunas da matriz, respectivamente.
   
-  Depois disso teremos $N$ linhas. Na i\textsuperscript{ésima} delas teremos $M$ números $a_{i, 1}, \ldots, a_{i, M}$ onde $a_{i, j}$ representa o altura do terreno na linha $i$ e coluna $j$ da matriz.
+  Depois disso teremos $N$ linhas. Na i-ésima delas teremos $M$ números $a_{i, 1}, \ldots, a_{i, M}$ onde $a_{i, j}$ representa o altura do terreno na linha $i$ e coluna $j$ da matriz.
 
-  $N \times M \leq 2\cdot 10^5$, $0 \leq a_{i, j} \leq 10^9$.
+  $N \times M \leq 2\times 10^5$, $0 \leq a_{i, j} \leq 10^9$.
 }
 
 %
@@ -39,6 +39,12 @@ Dado um mapa topográfico da área, descrito como uma matriz $N\times M$ (em que
 \outputdesc{
   Imprima um número que representa o tamanho da maior pista de pouso para o 14-bis.
 }
+
+\section*{Restrições}
+
+\begin{itemize}
+  $N \times M \leq 2\times 10^5$, $0 \leq a_{i, j} \leq 10^9$.
+\end{itemize}
 
 %\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
 %in the documents directory and include them as samples.

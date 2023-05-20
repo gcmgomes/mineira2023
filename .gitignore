@@ -4,7 +4,6 @@
 include/*
 lib/*
 problems/.box/main.py
-problems/baloes/*
 problems/trebado/build
 *.exe
 *.pyc

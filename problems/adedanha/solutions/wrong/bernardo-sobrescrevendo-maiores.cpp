@@ -18,8 +18,7 @@ int main() { _
     v[(S + dedos_adriana)%N] = dedos_adriana;
     
   for (int dedos_necessarios : v) 
-    std::cout << dedos_necessarios << ' ';
-  std::cout << std::endl;
+    std::cout << dedos_necessarios << std::endl;
 
   return 0;
 }

@@ -17,8 +17,4 @@ print(n)
 
 for i in range(n - 1):
   k = randint(0, max_k)
-  print(k, end='')
-  if (i < n - 2):
-    print(' ', end='')
-  else:
-    print()
+  print(k)
