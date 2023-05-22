@@ -40,25 +40,27 @@ Infelizmente, nosso herói não é lá muito bom nessa área, e pediu a você, G
 % For input, use one of the following
 %
 
-\inputdesc{
-	A primeira linha contém um inteiro $1 \leq N \leq 10^5$, o número de vértices da árvore.
-	As próximas $N-1$ linhas contém as arestas $1 \leq a_i, b_i \leq N$ da árvore. É garantido que as arestas descrevem uma árvore, e a raiz é
-	o vértice de número $1$.
+\section*{Entrada}
 
-	A próxima linha contém o um inteiro $1 \leq Q \leq 10^5$ que representa o número de eventos presenciados por Bacon, O Próspero.
-	As próximas $Q$ linhas contém 2 inteiros cada, $t_i, v_i$, em que $t_i \in \{1, 2, 3\}$ define o $i$-ésimo evento e $1 \leq v_i \leq N$ o vértice que enraiza a sub-árvore em questão.
-	\begin{itemize}
-		\item Se $t_i = 1$, então a sub-árvore enraizada em $v_i$ se acende.
-		\item Se $t_i = 2$, a sub-árvore enraizada em $v_i$ se apaga.
-		\item Se $t_i = 3$, o pequeno Bacon perguntou a seu bisavô quantos vértices na sub-árvore enraizada em $v_i$ (inclusive $v_i$) estavam acesos.
-	\end{itemize}
-}
+A primeira linha contém um inteiro $1 \leq N \leq 10^5$, o número de vértices da árvore.
+As próximas $N-1$ linhas contém as arestas $1 \leq a_i, b_i \leq N$ da árvore. É garantido que as arestas descrevem uma árvore, e a raiz é
+o vértice de número $1$.
+
+A próxima linha contém o um inteiro $1 \leq Q \leq 10^5$ que representa o número de eventos presenciados por Bacon, O Próspero.
+As próximas $Q$ linhas contém 2 inteiros cada, $t_i, v_i$, em que $t_i \in \{1, 2, 3\}$ define o $i$-ésimo evento e $1 \leq v_i \leq N$ o vértice que enraiza a sub-árvore em questão.
+\begin{itemize}
+\item Se $t_i = 1$, então a sub-árvore enraizada em $v_i$ se acende.
+\item Se $t_i = 2$, a sub-árvore enraizada em $v_i$ se apaga.
+\item Se $t_i = 3$, o pequeno Bacon perguntou a seu bisavô quantos vértices na sub-árvore enraizada em $v_i$ (inclusive $v_i$) estavam acesos.
+\end{itemize}
 
 %
 % For output, use one of the following
 %
 
-\outputdesc{Para eventos do tipo $3$, imprima o número de vértices acesos na sub-árvore enraizada em $v_i$.}
+\section*{Saída}
+
+Para eventos do tipo $3$, imprima o número de vértices acesos na sub-árvore enraizada em $v_i$.
 
 %\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
 %in the documents directory and include them as samples.
@@ -69,4 +71,4 @@ Infelizmente, nosso herói não é lá muito bom nessa área, e pediu a você, G
 \item $1 \leq N, Q \leq 10^5$.
 \end{itemize}
 
-\sampleio
+\exemplo
