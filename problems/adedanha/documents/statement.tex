@@ -4,23 +4,23 @@ Adedanha funciona da seguinte forma: todas as crianças esticam alguns dedos e o
 
 Alan é muito esperto e decidiu trapacear: ele só vai decidir o número de dedos que vai esticar logo depois de ver o número que cada uma das outras crianças esticou (Alan consegue contar dedos muito rápido, as outras crianças nem percebem sua trapaça!).
 
-Dada a sua informação privilegiada Alan quer saber, para cada criança (incluindo ele próprio), se ele consegue escolher algum número de dedos para esticar de forma que esta criança capine (se vários números de dedos esticados forem possíveis para fazer certa criança capinar, imprima o menor deles) ou caso seja impossível, -1.
+Dada a sua informação privilegiada, Alan quer saber, para cada criança (incluindo ele próprio), se ele consegue escolher algum número de dedos para esticar de forma que esta criança capine (se vários números de dedos esticados forem possíveis para fazer certa criança capinar, imprima o menor deles), ou caso seja impossível, -1.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=7cm]{\CWD/adedanha.png}
-    \caption{Como no Exemplo 1, se $N = 4$ e os amigos de Alan esticarem $1$, $3$ e $2$ dedos, Alan pode esticar um dedo e assim o fim da contagem caia na criança $3$ (D na figura).}
+    \caption{Como no Exemplo 1, se $N = 4$ e os amigos de Alan esticarem $1$, $3$ e $2$ dedos, Alan pode esticar $1$ dedo e assim o fim da contagem caia na criança $3$ (D na figura).}
 \end{figure}
 
 \section*{Entrada}
 
 A primeira linha da entrada contém um inteiro $N$ ($1 \leq N \leq 10^5$), o número de crianças participando da adedanha (incluindo Alan).
 
-Depois disso temos $N - 1$ linhas com inteiros entre $0$ e $20$. A i-ésima linha contém o número de dedos que a criança $1,\ldots,N - 1$ esticou (todas as crianças menos Alan). 
+Depois disso temos $N - 1$ linhas com inteiros de $0$ a $20$. A $i$-ésima linha contém o número de dedos que a criança $1,\ldots,N - 1$ esticou (todas as crianças menos Alan). 
 
 \section*{Saída}
 
-A saída deve conter $N$ linhas com números $d_0, d_1, \ldots, d_{n - 1}$. O número $d_i$ deve ser o menor número de dedos que Alan deve esticar para que a criança $i$ capine o lote e $-1$ caso seja impossível que $i$ capine.
+A saída deve conter $N$ linhas com números $d_0, d_1, \ldots, d_{N - 1}$. O número $d_i$ deve ser o menor número de dedos que Alan deve esticar para que a criança $i$ capine o lote e $-1$ caso seja impossível que $i$ capine.
 
 \section*{Restrições}
 
