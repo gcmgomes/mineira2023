@@ -10,9 +10,9 @@ na codificação da cor.
 \end{figure}
 
 Dadas duas cores, $(r_1,g_1,b_1)$ e $(r_2,g_2,b_2)$, calculamos a distancia entre elas como $d = |r_1-r_2| + |g_1-g_2| + |b_1-b_2|$.
-Sua tarefa é encontrar qual seria a cor que maximiza a menor distância daquelas já existentes. Caso mais de uma solução exista,
+Sua tarefa é encontrar qual seria a \textbf{cor que maximiza a menor distância daquelas já existentes}. Caso mais de uma solução exista,
 aquela que minimiza a primeira coordenada da codificação deve ser escolhida. Persistindo o empate, deve ser escolhida aquela que minimiza
-a segunda coordenada. Caso mais de uma solução ainda exista aplicando estes critérios, deve ser escolhida aquela que minimiza a terceira coordenada.
+a segunda coordenada. Caso mais de uma solução ainda exista aplicando estes critérios, deve ser escolhida aquela que minimiza a terceira coordenada. Em outras palavras, queremos a menor solução de forma lexicográfica.
 
 \section*{Entrada}
 
@@ -26,7 +26,8 @@ A saída contém três inteiros $R, G, B$, que correspondem ao código da cor qu
 \section*{Restrições}
 
 \begin{itemize}
-\item $1 \leq N \leq 20$, $0 \leq R, G, B \leq 255$.
+\item $1 \leq N \leq 20$
+\item $0 \leq R, G, B \leq 255$.
 \end{itemize}
 
 

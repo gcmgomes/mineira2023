@@ -4,12 +4,14 @@
 %
 % Example:
 
-Após inventar o avião, o grande mineiro Alberto Santos-Dumont precisava testar sua invenção.
+\begin{center}
+\textit{Após inventar o avião, o grande mineiro Alberto Santos-Dumont precisava testar sua invenção.}
+\end{center}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=7cm]{\CWD/14bis.jpg}
-  \caption{14-bis o primeiro avião da história a levantar voo}
+  \caption{14-bis, o primeiro avião da história a levantar voo}
 \end{figure}
 
 Para melhorar as chances de decolar sua lendária aeronave, o 14-bis, Santos-Dumont precisava de uma pista de decolagem que fosse bastante reta e o mais comprida possível. Uma pista de decolagem é descrita como uma sequência de números (representando a altura de cada trecho da pista) e esta é considerada reta se a diferença em valor absoluto entre duas posições adjacentes nessa sequência não é maior que um (não queremos estragar o trem de pouso da nossa querida aeronave de papel com terrenos acidentados!).
@@ -25,11 +27,9 @@ Dado um mapa topográfico da área, descrito como uma matriz $N\times M$ (em que
 % For input, use one of the following
 %
 \inputdesc{
-  A primeira linha conterá dois números $N$ e $M$ que representam o número de linhas e colunas da matriz, respectivamente.
+  A primeira linha conterá dois números $N$ e $M$ (tais que $N \times M \leq 2\times 10^5$) que representam o número de linhas e colunas da matriz, respectivamente.
   
-  Depois disso teremos $N$ linhas. Na i-ésima delas teremos $M$ números $a_{i, 1}, \ldots, a_{i, M}$ onde $a_{i, j}$ representa o altura do terreno na linha $i$ e coluna $j$ da matriz.
-
-  $N \times M \leq 2\times 10^5$, $0 \leq a_{i, j} \leq 10^9$.
+  Depois disso teremos $N$ linhas. Na i-ésima delas teremos $M$ números $a_{i, 1}, \ldots, a_{i, M}$ onde $a_{i, j}$ representa o altura do terreno na linha $i$ e coluna $j$ da matriz e $0 \leq a_{i, j} \leq 10^9$.
 }
 
 %
@@ -43,7 +43,8 @@ Dado um mapa topográfico da área, descrito como uma matriz $N\times M$ (em que
 \section*{Restrições}
 
 \begin{itemize}
-  $N \times M \leq 2\times 10^5$, $0 \leq a_{i, j} \leq 10^9$.
+  \item $N \times M \leq 2\times 10^5$
+  \item $0 \leq a_{i, j} \leq 10^9$.
 \end{itemize}
 
 %\sampleio will look for files named sample-n.in and sample-n.sol (where n is 1, 2, 3...)
