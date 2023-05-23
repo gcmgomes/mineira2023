@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.4)  23 MAY 2023 11:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.4)  23 MAY 2023 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -796,11 +796,11 @@ File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 11.
 (pdftex.def)             Requested size: 192.72148pt x 162.60875pt.
-<logo_patrocinadores.png, id=9, 398.23781pt x 91.09032pt>
-File: logo_patrocinadores.png Graphic file (type png)
-<use logo_patrocinadores.png>
-Package pdftex.def Info: logo_patrocinadores.png  used on input line 11.
-(pdftex.def)             Requested size: 358.4107pt x 81.9805pt.
+<patrocinadores.pdf, id=9, 398.3386pt x 91.04883pt>
+File: patrocinadores.pdf Graphic file (type pdf)
+<use patrocinadores.pdf>
+Package pdftex.def Info: patrocinadores.pdf  used on input line 11.
+(pdftex.def)             Requested size: 358.50142pt x 81.94318pt.
 <logo_colaboradores.png, id=10, 85.06781pt x 85.06781pt>
 File: logo_colaboradores.png Graphic file (type png)
 <use logo_colaboradores.png>
@@ -815,8 +815,8 @@ Package pdftex.def Info: logo_realizacao.png  used on input line 11.
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo.
-png> <./logo_patrocinadores.png> <./logo_colaboradores.png> <./logo_realizacao.
-png>] (./instrucoes.tex
+png> <./patrocinadores.pdf> <./logo_colaboradores.png> <./logo_realizacao.png>]
+ (./instrucoes.tex
 Overfull \hbox (7.9141pt too wide) in paragraph at lines 8--9
 []\T1/cmr/m/n/10.95 Sua so-lu-ção deve ser no-me-ada \T1/cmr/m/it/10.95 co-de-n
 ame\T1/cmr/m/n/10.95 .c, \T1/cmr/m/it/10.95 co-de-name\T1/cmr/m/n/10.95 .cpp, \
@@ -831,7 +831,7 @@ been already used, duplicate ignored
                    \relax 
 l.11 \InsertTitlePage
                       [1] (../problems/elemento/documents/statement.tex
-<../problems/elemento/documents/elementox.jpg, id=36, 411.939pt x 308.5929pt>
+<../problems/elemento/documents/elementox.jpg, id=72, 411.939pt x 308.5929pt>
 File: ../problems/elemento/documents/elementox.jpg Graphic file (type jpg)
 <use ../problems/elemento/documents/elementox.jpg>
 Package pdftex.def Info: ../problems/elemento/documents/elementox.jpg  used on 
@@ -854,7 +854,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 37--37
 
  <../problems/elemento/documents/elementox.jpg>]
 (../problems/circulo/documents/statement.tex
-<../problems/circulo/documents/img/image.pdf, id=48, 107.66524pt x 85.66405pt>
+<../problems/circulo/documents/img/image.pdf, id=84, 107.66524pt x 85.66405pt>
 File: ../problems/circulo/documents/img/image.pdf Graphic file (type pdf)
 <use ../problems/circulo/documents/img/image.pdf>
 Package pdftex.def Info: ../problems/circulo/documents/img/image.pdf  used on i
@@ -872,7 +872,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 48--48
 
 ) [3 <../problems/circulo/documents/img/image.pdf>]
 (../problems/dever/documents/statement.tex
-<../problems/dever/documents/joao.jpg, id=57, 782.925pt x 471.7625pt>
+<../problems/dever/documents/joao.jpg, id=93, 782.925pt x 471.7625pt>
 File: ../problems/dever/documents/joao.jpg Graphic file (type jpg)
 <use ../problems/dever/documents/joao.jpg>
 Package pdftex.def Info: ../problems/dever/documents/joao.jpg  used on input li
@@ -895,7 +895,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 50--50
 
 [4 <../problems/dever/documents/joao.jpg>]) [5]
 (../problems/adedanha/documents/statement.tex
-<../problems/adedanha/documents/adedanha.png, id=67, 730.73pt x 702.12312pt>
+<../problems/adedanha/documents/adedanha.png, id=103, 730.73pt x 702.12312pt>
 File: ../problems/adedanha/documents/adedanha.png Graphic file (type png)
 <use ../problems/adedanha/documents/adedanha.png>
 Package pdftex.def Info: ../problems/adedanha/documents/adedanha.png  used on i
@@ -917,7 +917,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 31--31
  []
 
 ) [7] (../problems/sapo/documents/statement.tex
-<../problems/sapo/documents/img/image.png, id=80, 1586.92876pt x 733.74126pt>
+<../problems/sapo/documents/img/image.png, id=116, 1586.92876pt x 733.74126pt>
 File: ../problems/sapo/documents/img/image.png Graphic file (type png)
 <use ../problems/sapo/documents/img/image.png>
 Package pdftex.def Info: ../problems/sapo/documents/img/image.png  used on inpu
@@ -930,14 +930,14 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 49--49
 
 ) [8 <../problems/sapo/documents/img/image.png>]
 (../problems/14-bis/documents/statement.tex
-<../problems/14-bis/documents/14bis.jpg, id=87, 1003.75pt x 602.25pt>
+<../problems/14-bis/documents/14bis.jpg, id=123, 1003.75pt x 602.25pt>
 File: ../problems/14-bis/documents/14bis.jpg Graphic file (type jpg)
 <use ../problems/14-bis/documents/14bis.jpg>
 Package pdftex.def Info: ../problems/14-bis/documents/14bis.jpg  used on input 
 line 13.
 (pdftex.def)             Requested size: 199.16928pt x 119.50133pt.
-<../problems/14-bis/documents/matrix-sample.png, id=88, 902.87312pt x 356.83313
-pt>
+<../problems/14-bis/documents/matrix-sample.png, id=124, 902.87312pt x 356.8331
+3pt>
 File: ../problems/14-bis/documents/matrix-sample.png Graphic file (type png)
 <use ../problems/14-bis/documents/matrix-sample.png>
 Package pdftex.def Info: ../problems/14-bis/documents/matrix-sample.png  used o
@@ -960,7 +960,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 53--53
  []
 
 ) [10] (../problems/bolinha/documents/statement.tex
-<../problems/bolinha/documents/jogo-medieval.jpg, id=100, 1083.5682pt x 900.725
+<../problems/bolinha/documents/jogo-medieval.jpg, id=136, 1083.5682pt x 900.725
 1pt>
 File: ../problems/bolinha/documents/jogo-medieval.jpg Graphic file (type jpg)
 <use ../problems/bolinha/documents/jogo-medieval.jpg>
@@ -979,7 +979,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 44--44
 
 ) [11 <../problems/bolinha/documents/jogo-medieval.jpg>]
 (../problems/eentt/documents/statement.tex
-<../problems/eentt/documents/tenet.jpg, id=106, 1027.84pt x 1017.8025pt>
+<../problems/eentt/documents/tenet.jpg, id=142, 1027.84pt x 1017.8025pt>
 File: ../problems/eentt/documents/tenet.jpg Graphic file (type jpg)
 <use ../problems/eentt/documents/tenet.jpg>
 Package pdftex.def Info: ../problems/eentt/documents/tenet.jpg  used on input l
@@ -992,7 +992,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 49--49
 
 [12 <../problems/eentt/documents/tenet.jpg>]) [13]
 (../problems/trebado/documents/statement.tex
-<../problems/trebado/documents/andar-trebado-img.png, id=129, 212.795pt x 203.7
+<../problems/trebado/documents/andar-trebado-img.png, id=165, 212.795pt x 203.7
 6125pt>
 File: ../problems/trebado/documents/andar-trebado-img.png Graphic file (type pn
 g)
@@ -1016,7 +1016,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 59--59
  []
 
 ) [15] (../problems/k-peia/documents/statement.tex
-<../problems/k-peia/documents/8-peia.png, id=141, 3006.23125pt x 2329.70375pt>
+<../problems/k-peia/documents/8-peia.png, id=177, 3006.23125pt x 2329.70375pt>
 File: ../problems/k-peia/documents/8-peia.png Graphic file (type png)
 <use ../problems/k-peia/documents/8-peia.png>
 Package pdftex.def Info: ../problems/k-peia/documents/8-peia.png  used on input
@@ -1028,7 +1028,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 63--63
  []
 
 ) [17] (../problems/baloes/documents/statement.tex
-<../problems/baloes/documents/baloes.jpg, id=152, 1664.2175pt x 963.6pt>
+<../problems/baloes/documents/baloes.jpg, id=189, 1664.2175pt x 963.6pt>
 File: ../problems/baloes/documents/baloes.jpg Graphic file (type jpg)
 <use ../problems/baloes/documents/baloes.jpg>
 Package pdftex.def Info: ../problems/baloes/documents/baloes.jpg  used on input
@@ -1046,7 +1046,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 36--36
 
 ) [18 <../problems/baloes/documents/baloes.jpg>] [19]
 (../problems/arvore/documents/statement.tex
-<../problems/arvore/documents/capivara.png, id=163, 803.0pt x 602.25pt>
+<../problems/arvore/documents/capivara.png, id=200, 803.0pt x 602.25pt>
 File: ../problems/arvore/documents/capivara.png Graphic file (type png)
 <use ../problems/arvore/documents/capivara.png>
 Package pdftex.def Info: ../problems/arvore/documents/capivara.png  used on inp
@@ -1058,7 +1058,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 75--75
  []
 
 ) [21] (../problems/tresquatrocinco/documents/statement.tex
-<../problems/tresquatrocinco/documents/imagem.png, id=173, 1078.0275pt x 833.11
+<../problems/tresquatrocinco/documents/imagem.png, id=210, 1078.0275pt x 833.11
 25pt>
 File: ../problems/tresquatrocinco/documents/imagem.png Graphic file (type png)
 <use ../problems/tresquatrocinco/documents/imagem.png>
@@ -1072,7 +1072,7 @@ Overfull \hbox (24.00003pt too wide) in paragraph at lines 44--44
 
 ) [22 <../problems/tresquatrocinco/documents/imagem.png>]
 (../problems/pastel/documents/statement.tex
-<../problems/pastel/documents/Pastel-de-Festa.jpg, id=182, 501.875pt x 501.875p
+<../problems/pastel/documents/Pastel-de-Festa.jpg, id=218, 501.875pt x 501.875p
 t>
 File: ../problems/pastel/documents/Pastel-de-Festa.jpg Graphic file (type jpg)
 <use ../problems/pastel/documents/Pastel-de-Festa.jpg>
@@ -1095,8 +1095,8 @@ Package rerunfilecheck Info: File `prova.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  24686 strings out of 478268
- 467923 string characters out of 5846348
- 723818 words of memory out of 5000000
+ 467912 string characters out of 5846348
+ 723813 words of memory out of 5000000
  42368 multiletter control sequences out of 15000+600000
  486779 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1121,10 +1121,10 @@ exmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2022/tex
 mf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf
 -dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2022/texmf-d
 ist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on prova.pdf (25 pages, 12461207 bytes).
+Output written on prova.pdf (25 pages, 12826803 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
+ 321 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
  53 named destinations out of 1000 (max. 500000)
  108 words of extra memory for PDF output out of 10000 (max. 10000000)
 
