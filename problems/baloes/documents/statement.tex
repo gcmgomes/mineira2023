@@ -9,15 +9,15 @@ na codificação da cor.
     \includegraphics[width=8cm]{\CWD/baloes.jpg}
 \end{figure}
 
-Dadas duas cores, $(r_1,g_1,b_1)$ e $(r_2,g_2,b_2)$, calculamos a distancia entre elas como $d = |r_1-r_2| + |g_1-g_2| + |b_1-b_2|$.
-Sua tarefa é encontrar qual seria a \textbf{cor que maximiza a menor distância daquelas já existentes}. Caso mais de uma solução exista,
+Dadas duas cores, $(r_1,g_1,b_1)$ e $(r_2,g_2,b_2)$, calculamos a distância entre elas como $d = |r_1-r_2| + |g_1-g_2| + |b_1-b_2|$.
+Sua tarefa é encontrar qual seria a nova cor que \textbf{maximiza a menor distância entre ela e aquelas já existentes}. Caso mais de uma solução exista,
 aquela que minimiza a primeira coordenada da codificação deve ser escolhida. Persistindo o empate, deve ser escolhida aquela que minimiza
 a segunda coordenada. Caso mais de uma solução ainda exista aplicando estes critérios, deve ser escolhida aquela que minimiza a terceira coordenada. Em outras palavras, queremos a menor solução de forma lexicográfica.
 
 \section*{Entrada}
 
 A primeira linha da entrada contém um inteiro $1 \leq N \leq 20$. Em seguida são dadas $N$ linhas, de forma que a $i$-ésima linha, contém 3 números
-entre 0 e 255 (inclusivo), correspondendo ao código RGB da $i$-ésima cor já selecionada.
+entre 0 e 255 (inclusive), correspondendo ao código RGB da $i$-ésima cor já selecionada.
 
 \section*{Saída}
 
