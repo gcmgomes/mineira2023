@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # encoding: utf-8
 
 import os
@@ -8,7 +8,7 @@ import sys
 
 from glob import glob
 from tempfile import NamedTemporaryFile
-from StringIO import StringIO
+from io import StringIO
 
 
 ROOT= os.environ['ROOT']
