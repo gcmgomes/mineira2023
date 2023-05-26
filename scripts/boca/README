@@ -1,0 +1,17 @@
+To make Boca packages:
+
+1) build input, output for all problems in the tree (for example, box check)
+2) build pdfs for contest and warmup
+
+Then, go to either "contest" or "warmup" in this directory
+
+1) in the pdf directory, edit split.sh to generate individual pdfs for each problem
+2) execute ./gen_problem_descr.py to generate the auxiliary file problems.desc
+3) execute ../bin/build_package.py
+
+Built packages will be in the packages directory.
+
+To verify the test data generated, execute ./diff.sh. But diff.sh
+expects that for each problem there is a solution whose name includes
+the word "reference" (for example hotdog-reference.cpp)
+
