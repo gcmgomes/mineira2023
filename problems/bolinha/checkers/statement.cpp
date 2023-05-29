@@ -9,10 +9,11 @@ int main(int argc, char* argv[]) {
   int n = inf.readInt(1, 2e5);
   inf.readEoln();
   for (int i = 0; i < n; i++) {
-    inf.readInt(1, 3);
+    int a = inf.readInt(1, 3);
     inf.readSpace();
-    inf.readInt(1, 3);
+    int b = inf.readInt(1, 3);
     inf.readEoln();
+	ensure(a != b);
   }
   inf.readEof();
 }

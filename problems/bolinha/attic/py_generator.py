@@ -14,4 +14,8 @@ n = int(sys.argv[2])
 print(n)
 
 for i in range(n):
-    print(randint(1, 3), randint(1, 3))
+    a, b = (1, 1)
+    while a == b:
+        a = randint(1, 3)
+        b = randint(1, 3)
+    print(a, b)
